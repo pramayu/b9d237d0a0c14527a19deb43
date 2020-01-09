@@ -86,6 +86,17 @@ const setHideModale = (props) => {
     })
 }
 
+const renderFeedType = (props) => {
+    return ['event','shots','quest'].map((feedtype, index) => {
+        return (
+            <TouchableOpacity onPress={(e) => props.setFeedType(feedtype)} key={index} style={{marginRight: 5}}>
+                <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#ffffff', paddingHorizontal: 15, paddingVertical: 5,
+                paddingTop: 6, borderRadius: 6, backgroundColor: props.feedtype === feedtype ? '#ea4c89' : '#455176', borderWidth: .5, borderColor: '#2e3853',}}>{feedtype.toUpperCase()}</Text>
+            </TouchableOpacity>
+        )
+    })
+}
+
 const FocusInMenu = (props) => {
     const showpinkbtn = showbutton.interpolate({
         inputRange: [0, 1],
@@ -132,7 +143,7 @@ const FocusInMenu = (props) => {
             </Animated.View>
             <Animated.View style={{width: '100%', height: '100%', position: 'absolute', zIndex: 9999, justifyContent: 'flex-start', opacity: modalopity, transform: [{translateY: props.modals === false ? showmdle : hidemdle}],
                 alignItems: 'center', backgroundColor: 'rgba(255,255,255,.8)'}}>
-                <View style={{width: '100%', height: height / 1.5, backgroundColor: '#364161', borderRadius: 10, elevation: 10,
+                <View style={{width: '100%', height: height / 1.3, backgroundColor: '#364161', borderRadius: 10, elevation: 10,
                      paddingHorizontal: 15, paddingVertical: 10}}>
                     <View style={{width: '100%', height: 24, flexDirection: 'row'}}>
                         <View style={{width: '70%', height: '100%'}}>
@@ -146,19 +157,17 @@ const FocusInMenu = (props) => {
                     </View>
                     <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#ffffff', marginTop: 5}}>Choose Feed</Text>
                     <View style={{width: '100%', flexDirection: 'row', marginTop: 5}}>
-                        <TouchableOpacity style={{marginRight: 5}}>
-                            <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#ffffff', paddingHorizontal: 15, paddingVertical: 5,
-                                paddingTop: 6, borderRadius: 6, backgroundColor: '#455176', borderWidth: .5, borderColor: '#2e3853',}}>EVENT</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity style={{marginRight: 5}}>
-                            <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#ffffff', paddingHorizontal: 15, paddingVertical: 5,
-                                paddingTop: 6, borderRadius: 6, backgroundColor: '#455176', borderWidth: .5, borderColor: '#2e3853',}}>SHOTS</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity style={{marginRight: 5}}>
-                            <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#ffffff', paddingHorizontal: 15, paddingVertical: 5,
-                                paddingTop: 6, borderRadius: 6, backgroundColor: '#455176', borderWidth: .5, borderColor: '#2e3853',}}>QUEST</Text>
-                        </TouchableOpacity>
+                        {renderFeedType(props)}
                     </View>
+                    {
+                        props.feedtype === 'quest'?
+                        <View>
+                            <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#ffffff', marginTop: 20}}>Title</Text>
+                            <TextInput placeholder="type title here" placeholderTextColor="#ffffff"
+                            style={{width: '100%', height: 40, borderRadius: 6, fontFamily: 'Brandon_Medium', paddingHorizontal: 10, borderWidth: .5, borderColor: '#2e3853',
+                            fontSize: 15, color: '#ffffff', backgroundColor: '#455176', marginTop: 5}} />
+                        </View> : null
+                    }
                     <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#ffffff', marginTop: 20}}>Caption</Text>
                     <TextInput placeholder="type caption here" placeholderTextColor="#ffffff"
                         style={{width: '100%', height: 90, borderRadius: 6, fontFamily: 'Brandon_Medium', paddingHorizontal: 10, borderWidth: .5, borderColor: '#2e3853',

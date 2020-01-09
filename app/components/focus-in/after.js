@@ -14,7 +14,11 @@ const AfterChoose = (props) => {
                 <Header status={props.status} setStatusAnimated={props.setStatusAnimated} />
             </View>
             <View style={{width: '100%', height: height / 1.1, marginTop: 20}}>
-                <FocusInMenu setActionButton={props.setActionButton} setScrollAnimated={props.setScrollAnimated} scroll={props.scroll} modals={props.modals} />
+                <FocusInMenu 
+                    setActionButton={props.setActionButton}
+                    setScrollAnimated={props.setScrollAnimated}
+                    setFeedType={props.setFeedType}
+                    scroll={props.scroll} modals={props.modals} feedtype={props.feedtype} />
             </View>
         </View>
     )

@@ -16,11 +16,13 @@ class FocusIn extends Component {
             status: false,
             scroll: false,
             modals: false,
-            actionbutton: 'add'
+            actionbutton: 'add',
+            feedtype: 'event'
         },
         this.setStatusAnimated = this.setStatusAnimated.bind(this)
         this.setScrollAnimated = this.setScrollAnimated.bind(this)
         this.setActionButton = this.setActionButton.bind(this)
+        this.setFeedType = this.setFeedType.bind(this)
     }
 
     setStatusAnimated = (status) => {
@@ -42,15 +44,22 @@ class FocusIn extends Component {
         })
     }
 
+    setFeedType = (feedtype) => {
+        this.setState({
+            feedtype
+        })
+    }
+
     render() {
         return (
             <View style={[style.container,{paddingHorizontal: 20}]}>
                 <StatusBar barStyle="dark-content" backgroundColor="#ffffff" />
                 {/*<BeforeChoose /> */}
-                <AfterChoose status={this.state.status} scroll={this.state.scroll} modals={this.state.modals}
+                <AfterChoose status={this.state.status} scroll={this.state.scroll} modals={this.state.modals} feedtype={this.state.feedtype}
                     setScrollAnimated={this.setScrollAnimated}
                     setStatusAnimated={this.setStatusAnimated}
-                    setActionButton={this.setActionButton} />
+                    setActionButton={this.setActionButton}
+                    setFeedType={this.setFeedType} />
             </View>
         )
     }

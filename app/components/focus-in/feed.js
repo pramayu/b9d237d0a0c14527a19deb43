@@ -45,7 +45,7 @@ const FeedFocusIn = () => {
                             <TouchableOpacity style={{width: 18, height: 18}}>
                                 <Ionicons name="ios-attach" size={18} color="#444444" />
                             </TouchableOpacity>
-                            <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 14, color: "#444444", paddingLeft: 3, paddingRight: 10}}>2 files</Text>
+                            <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 14, color: "#444444", paddingLeft: 3, paddingRight: 10}}>2 shots</Text>
                         </View>
                     </View>
                 </View>
