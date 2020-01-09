@@ -14,10 +14,13 @@ class FocusIn extends Component {
         super(props);
         this.state = {
             status: false,
-            scroll: false
+            scroll: false,
+            modals: false,
+            actionbutton: 'add'
         },
         this.setStatusAnimated = this.setStatusAnimated.bind(this)
         this.setScrollAnimated = this.setScrollAnimated.bind(this)
+        this.setActionButton = this.setActionButton.bind(this)
     }
 
     setStatusAnimated = (status) => {
@@ -32,14 +35,22 @@ class FocusIn extends Component {
         })
     }
 
+    setActionButton = (actionbutton, modals) => {
+        this.setState({
+            actionbutton,
+            modals
+        })
+    }
+
     render() {
         return (
             <View style={[style.container,{paddingHorizontal: 20}]}>
                 <StatusBar barStyle="dark-content" backgroundColor="#ffffff" />
                 {/*<BeforeChoose /> */}
-                <AfterChoose status={this.state.status} scroll={this.state.scroll}
+                <AfterChoose status={this.state.status} scroll={this.state.scroll} modals={this.state.modals}
                     setScrollAnimated={this.setScrollAnimated}
-                    setStatusAnimated={this.setStatusAnimated} />
+                    setStatusAnimated={this.setStatusAnimated}
+                    setActionButton={this.setActionButton} />
             </View>
         )
     }
