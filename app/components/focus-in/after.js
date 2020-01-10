@@ -18,7 +18,11 @@ const AfterChoose = (props) => {
                     setActionButton={props.setActionButton}
                     setScrollAnimated={props.setScrollAnimated}
                     setFeedType={props.setFeedType}
-                    scroll={props.scroll} modals={props.modals} feedtype={props.feedtype} />
+                    setFeedTags={props.setFeedTags}
+                    setFeedTag={props.setFeedTag}
+                    tags={props.tags}
+                    tag={props.tag}
+                    scroll={props.scroll} modals={props.modals} actionbutton={props.actionbutton} feedtype={props.feedtype} />
             </View>
         </View>
     )

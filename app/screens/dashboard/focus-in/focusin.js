@@ -17,49 +17,73 @@ class FocusIn extends Component {
             scroll: false,
             modals: false,
             actionbutton: 'add',
-            feedtype: 'event'
+            feedtype: 'event',
+            tags: [],
+            tag: ''
         },
-        this.setStatusAnimated = this.setStatusAnimated.bind(this)
-        this.setScrollAnimated = this.setScrollAnimated.bind(this)
-        this.setActionButton = this.setActionButton.bind(this)
-        this.setFeedType = this.setFeedType.bind(this)
-    }
+        this.setStatusAnimated = this.setStatusAnimated.bind(this);
+        this.setScrollAnimated = this.setScrollAnimated.bind(this);
+        this.setActionButton = this.setActionButton.bind(this);
+        this.setFeedType = this.setFeedType.bind(this);
+        this.setFeedTags = this.setFeedTags.bind(this);
+        this.setFeedTag = this.setFeedTag.bind(this);
+    };
 
     setStatusAnimated = (status) => {
         this.setState({
             status
-        })
-    }
+        });
+    };
 
     setScrollAnimated = (scroll) => {
         this.setState({
             scroll
-        })
-    }
+        });
+    };
 
     setActionButton = (actionbutton, modals) => {
         this.setState({
             actionbutton,
             modals
-        })
-    }
+        });
+    };
 
     setFeedType = (feedtype) => {
         this.setState({
             feedtype
+        });
+    };
+
+    setFeedTag = (tag) => {
+        let reg = tag.replace(/[^a-zA-Z ]/g, "")
+        this.setState({
+            tag: reg
         })
     }
+
+    setFeedTags = () => {
+        const xvalue = this.state.tags.filter((tag) => tag === this.state.tag)
+        if(xvalue.length === 0) {
+            this.setState({
+                tags: [...this.state.tags, this.state.tag],
+                tag: ''
+            });
+        }
+    };
 
     render() {
         return (
             <View style={[style.container,{paddingHorizontal: 20}]}>
                 <StatusBar barStyle="dark-content" backgroundColor="#ffffff" />
                 {/*<BeforeChoose /> */}
-                <AfterChoose status={this.state.status} scroll={this.state.scroll} modals={this.state.modals} feedtype={this.state.feedtype}
+                <AfterChoose status={this.state.status} scroll={this.state.scroll} modals={this.state.modals}
+                    actionbutton={this.state.actionbutton} feedtype={this.state.feedtype} tags={this.state.tags} tag={this.state.tag}
                     setScrollAnimated={this.setScrollAnimated}
                     setStatusAnimated={this.setStatusAnimated}
                     setActionButton={this.setActionButton}
-                    setFeedType={this.setFeedType} />
+                    setFeedType={this.setFeedType}
+                    setFeedTags={this.setFeedTags}
+                    setFeedTag={this.setFeedTag} />
             </View>
         )
     }
