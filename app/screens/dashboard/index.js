@@ -14,6 +14,18 @@ import Quest from '../../components/dashboard/quest';
 const {width, height} = Dimensions.get('window');
 
 class Dashboard extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+
+        },
+        this.linkToFocusIn = this.linkToFocusIn.bind(this)
+    }
+
+    linkToFocusIn = () => {
+        this.props.navigation.navigate('FocusIn')
+    }
+
     render() {
         return (
             <View style={[style.container,{paddingHorizontal: 20}]}>
@@ -28,7 +40,7 @@ class Dashboard extends Component {
                     <Preview />
                 </View>
                 <View style={{width: '100%', height: height / 8, marginBottom: 15}}>
-                    <MainMenu />
+                    <MainMenu linkToFocusIn={this.linkToFocusIn} />
                 </View>
                 <View style={{width: '100%', height: height / 6}}>
                     <PinTask />

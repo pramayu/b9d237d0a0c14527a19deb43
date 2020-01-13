@@ -17,6 +17,7 @@ const AfterChoose = (props) => {
                 <FocusInMenu 
                     setActionButton={props.setActionButton}
                     setScrollAnimated={props.setScrollAnimated}
+                    setRemoveTag = {props.setRemoveTag}
                     setFeedType={props.setFeedType}
                     setFeedTags={props.setFeedTags}
                     setFeedTag={props.setFeedTag}

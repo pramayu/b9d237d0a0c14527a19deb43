@@ -24,6 +24,7 @@ class FocusIn extends Component {
         this.setStatusAnimated = this.setStatusAnimated.bind(this);
         this.setScrollAnimated = this.setScrollAnimated.bind(this);
         this.setActionButton = this.setActionButton.bind(this);
+        this.setRemoveTag = this.setRemoveTag.bind(this);
         this.setFeedType = this.setFeedType.bind(this);
         this.setFeedTags = this.setFeedTags.bind(this);
         this.setFeedTag = this.setFeedTag.bind(this);
@@ -71,19 +72,25 @@ class FocusIn extends Component {
         }
     };
 
+    setRemoveTag = (index) => {
+        this.state.tags.splice(index, 1)
+        this.setState({ tags: this.state.tags })
+    }
+
     render() {
         return (
             <View style={[style.container,{paddingHorizontal: 20}]}>
                 <StatusBar barStyle="dark-content" backgroundColor="#ffffff" />
-                {/*<BeforeChoose /> */}
-                <AfterChoose status={this.state.status} scroll={this.state.scroll} modals={this.state.modals}
+                <BeforeChoose />
+                {/* <AfterChoose status={this.state.status} scroll={this.state.scroll} modals={this.state.modals}
                     actionbutton={this.state.actionbutton} feedtype={this.state.feedtype} tags={this.state.tags} tag={this.state.tag}
                     setScrollAnimated={this.setScrollAnimated}
                     setStatusAnimated={this.setStatusAnimated}
                     setActionButton={this.setActionButton}
                     setFeedType={this.setFeedType}
                     setFeedTags={this.setFeedTags}
-                    setFeedTag={this.setFeedTag} />
+                    setFeedTag={this.setFeedTag}
+                    setRemoveTag={this.setRemoveTag} /> */}
             </View>
         )
     }

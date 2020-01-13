@@ -9,6 +9,7 @@ import SignInScreen       from '../screens/signin/signin';
 import DiscoverSchool     from '../screens/discoverschool/discoverschool';
 import VerifyUser         from '../screens/verify/verify';
 import Discoverclass      from '../screens/discoverclass/discoverclass';
+import FocusIn            from '../screens/dashboard/focus-in/focusin';
 
 // check token
 import CheckRefreshToken  from '../screens/checktoken/checktoken';
@@ -16,7 +17,7 @@ import CheckRefreshToken  from '../screens/checktoken/checktoken';
 // dashboard
 import Dashboard          from '../screens/dashboard/index';
 
-var introScreenPath = createStackNavigator({
+const introScreenPath = createStackNavigator({
   SignInScreen        : {
     screen: SignInScreen
   },
@@ -36,10 +37,21 @@ var introScreenPath = createStackNavigator({
   headerMode: 'none',
 });
 
+const loggedScreenath = createStackNavigator({
+  Dashboard           : {
+    screen: Dashboard
+  },
+  FocusIn             : {
+    screen: FocusIn
+  }
+}, {
+  headerMode: 'none'
+});
+
 
 export var MainRoute = createAppContainer(createSwitchNavigator({
   SplashScreen        : { screen: SplashScreen },
   CheckRefreshToken   : { screen: CheckRefreshToken },
   IntroScreenPath     : { screen: introScreenPath },
-  Dashboard           : { screen: Dashboard }
+  Dashboard           : { screen: loggedScreenath }
 }));

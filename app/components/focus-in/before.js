@@ -12,10 +12,7 @@ const {width, height} = Dimensions.get('window');
 const BeforeChoose = (props) => {
     return (
         <View style={{width: '100%', height: '100%', flexDirection: 'column'}}>
-            <View style={{width: '100%',height: height / 12}}>
-                <Header />
-            </View>
-            <View style={{width: '100%', height: height / 14}}>
+            <View style={{width: '100%', height: height / 14, marginTop: 30}}>
                 <FormSearch />
             </View>
             <View style={{width: '100%', height: height/ 6, marginTop: 20}}>

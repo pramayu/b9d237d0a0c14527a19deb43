@@ -2,7 +2,8 @@ import React from 'react';
 import {
     View, Text, Dimensions,
     TouchableOpacity, Image,
-    ScrollView, Animated, TextInput
+    ScrollView, Animated, TextInput,
+    Keyboard
 } from 'react-native';
 import Ionicons   from 'react-native-vector-icons/Ionicons';
 import FeedFocusIn from './feed';
@@ -82,6 +83,7 @@ const setHideModale = (props) => {
             useNativeDriver: true
         })
     ]).start((e) => {
+        Keyboard.dismiss();
         props.setActionButton('add', false)
         showmodale.setValue(0);
     })
@@ -164,8 +166,8 @@ const FocusInMenu = (props) => {
                     </View>
                     {
                         props.actionbutton === 'add' ? 
-                        <MdlPost feedtype={props.feedtype} /> :
-                        <MdlFilter setFeedTags={props.setFeedTags} tags={props.tags} setFeedTag={props.setFeedTag} tag={props.tag} />
+                        <MdlPost feedtype={props.feedtype} setRemoveTag={props.setRemoveTag} setFeedTags={props.setFeedTags} tags={props.tags} setFeedTag={props.setFeedTag} tag={props.tag} /> :
+                        <MdlFilter setRemoveTag={props.setRemoveTag} setFeedTags={props.setFeedTags} tags={props.tags} setFeedTag={props.setFeedTag} tag={props.tag} />
                     }
                     {
                         props.actionbutton === 'add' ?

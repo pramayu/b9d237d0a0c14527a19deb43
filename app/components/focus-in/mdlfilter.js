@@ -37,10 +37,10 @@ const rendeSortBy = (props) => {
     })
 }
 
-const renderTags = (tags) => {
-    return tags.map((tag, index) => {
+const renderTags = (props) => {
+    return props.tags.map((tag, index) => {
         return (
-            <TouchableOpacity key={index}>
+            <TouchableOpacity key={index} onPress={(e) => props.setRemoveTag(index)}>
                 <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 14, color: '#ffffff', paddingHorizontal: 15, paddingVertical: 4, borderWidth: .5, borderColor: '#2e3853',
                     paddingTop: 5, borderRadius: 6, backgroundColor: '#ea4c89', marginVertical: 2, marginHorizontal: 2}}>{tag}</Text>
             </TouchableOpacity>
@@ -62,7 +62,7 @@ const MdlFilter = (props) => {
             <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#ffffff', marginTop: 10}}>Tags</Text>
             <View style={{width: '100%', height: 100, borderRadius: 6, backgroundColor: '#455176', borderWidth: .5, borderColor: '#2e3853', flexDirection: 'row', flexWrap: 'wrap', paddingHorizontal: 2, paddingVertical: 2}}>
                 {
-                    props.tags.length > 0 ? renderTags(props.tags) : null
+                    props.tags.length > 0 ? renderTags(props) : null
                 }
                 <TextInput placeholder="filter by tags" placeholderTextColor="#ffffff" value={props.tag} onChangeText={(tag) => props.setFeedTag(tag)} onKeyPress={(e) => setFilterTags(e, props)} autoCapitalize = 'none'
                     style={{width: '50%', height: 28, paddingVertical: 0, paddingHorizontal: 5, fontFamily: 'SourceSansPro-SemiBold', fontSize: 14, color: '#ffffff'}}/>
