@@ -62,15 +62,18 @@ class Event extends Component {
         })
     }
 
+    renderEmptyDate = () => {
+        return Array(this.state.firstDay).fill(0).map((xrt, index) => {
+            return (
+                <TouchableOpacity key={index} style={{width: 35, height: 35, justifyContent: 'center', alignItems: 'center',
+                    borderRadius: 100, marginHorizontal: 2.5, marginVertical: 2.5}}>
+                </TouchableOpacity>
+            )
+        })
+    }
+
     renderCalendar = (calendars) => {
         return calendars.map((calendar, index) => {
-            if(index < this.state.firstDay) {
-                return (
-                    <TouchableOpacity key={index} style={{width: 35, height: 35, justifyContent: 'center', alignItems: 'center',
-                        borderRadius: 100, marginHorizontal: 2.5, marginVertical: 2.5}}>
-                    </TouchableOpacity>
-                )
-            } else {
                 return (
                     <TouchableOpacity key={index} style={{width: 35, height: 35, justifyContent: 'center', alignItems: 'center',
                         borderRadius: 100, marginHorizontal: 2.5, marginVertical: 2.5, backgroundColor: calendar.daynum === this.state.currentDats ? '#ea4c89' : '#323a5a',
@@ -78,11 +81,11 @@ class Event extends Component {
                         <Text style={{color: '#ffffff', fontFamily: 'SourceSansPro-SemiBold', fontSize: 14}}>{calendar.daynum}</Text>
                     </TouchableOpacity>
                 )
-            }
         })
     }
 
     render() {
+        alert(this.state.firstDay)
         return (
             <View style={[style.container,{paddingHorizontal: 20}]}>
                 <StatusBar barStyle="dark-content" backgroundColor="#ffffff" />
@@ -106,6 +109,7 @@ class Event extends Component {
                         </View>
                         <View style={{width: '100%', flexDirection: 'row', flexWrap: 'wrap'}}>
                             { this.renderWeeks() }
+                            { this.renderEmptyDate() }
                             { this.renderCalendar(this.state.currentCalendar) }
                         </View>
                         <View style={{width: '100%', marginTop: 10}}>
