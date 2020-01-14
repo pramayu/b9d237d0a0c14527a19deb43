@@ -13,7 +13,7 @@ const FeedEvent = (props) => {
         <View style={{width: '100%', height: '100%'}}>
             <View style={{width: '100%', flexDirection: 'row', marginBottom: 15}}>
                 <View style={{width: '18%', alignItems: 'center', justifyContent: 'flex-start'}}>
-                    <View style={{width: 40, height: 40, backgroundColor: '#323a5a', borderRadius: 100, elevation: 10, justifyContent: 'center', alignItems: 'center'}}>
+                    <View style={{width: 40, height: 40, backgroundColor: '#323a5a', borderRadius: 100, justifyContent: 'center', alignItems: 'center'}}>
                         <SimpleLineIcons name="badge" size={18} color="#cde3e8" />
                     </View>
                 </View>
@@ -30,7 +30,7 @@ const FeedEvent = (props) => {
             </View>
             <View style={{width: '100%', flexDirection: 'row', marginBottom: 15}}>
                 <View style={{width: '18%', alignItems: 'center', justifyContent: 'flex-start'}}>
-                    <View style={{width: 40, height: 40, backgroundColor: '#5c0d7c', borderRadius: 100, elevation: 10, justifyContent: 'center', alignItems: 'center'}}>
+                    <View style={{width: 40, height: 40, backgroundColor: '#5c0d7c', borderRadius: 100, justifyContent: 'center', alignItems: 'center'}}>
                         <SimpleLineIcons name="graduation" size={18} color="#ffdfe6" />
                     </View>
                 </View>
@@ -47,7 +47,7 @@ const FeedEvent = (props) => {
             </View>
             <View style={{width: '100%', flexDirection: 'row', marginBottom: 15}}>
                 <View style={{width: '18%', alignItems: 'center', justifyContent: 'flex-start'}}>
-                    <View style={{width: 40, height: 40, backgroundColor: '#4049bb', borderRadius: 100, elevation: 10, justifyContent: 'center', alignItems: 'center'}}>
+                    <View style={{width: 40, height: 40, backgroundColor: '#4049bb', borderRadius: 100, justifyContent: 'center', alignItems: 'center'}}>
                         <SimpleLineIcons name="notebook" size={18} color="#cfd2ff" />
                     </View>
                 </View>
@@ -64,7 +64,7 @@ const FeedEvent = (props) => {
             </View>
             <View style={{width: '100%', flexDirection: 'row', marginBottom: 15}}>
                 <View style={{width: '18%', alignItems: 'center', justifyContent: 'flex-start'}}>
-                    <View style={{width: 40, height: 40, backgroundColor: '#1cbbd1', borderRadius: 100, elevation: 10, justifyContent: 'center', alignItems: 'center'}}>
+                    <View style={{width: 40, height: 40, backgroundColor: '#1cbbd1', borderRadius: 100, justifyContent: 'center', alignItems: 'center'}}>
                         <SimpleLineIcons name="earphones" size={18} color="#d4faff" />
                     </View>
                 </View>
