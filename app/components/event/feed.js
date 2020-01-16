@@ -18,9 +18,31 @@ const FeedEvent = (props) => {
                     </View>
                 </View>
                 <View style={{width: '82%', paddingLeft: 5}}>
-                    <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 14, color: '#444'}}>Design a Logo for a New Venture...</Text>
-                    <Text style={{fontFamily: 'SourceSansPro-Regular', fontSize: 14, color: '#444', marginTop: 5, lineHeight: 22}}>Wir sind ein Bauunternehmen und decken das gesamte Spektrum von Hoch- und Tiefbau ab. Wir können unterstützen unser...</Text>
-                    <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 14, color: '#323a5a', marginTop: 10}}>contest @bukapalak</Text>
+                    <View style={{width: '100%', flexDirection: 'row'}}>
+                        <View style={{width: '70%'}}>
+                            <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 15, color: '#444'}}>Lomba Desain Logo Berhadiah..</Text>
+                        </View>
+                        <View style={{width: '30%'}}>
+                            <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#fff', backgroundColor: '#3b6fd6', alignSelf: 'flex-end', paddingHorizontal: 10, paddingVertical: 3, borderRadius: 4}}>Active</Text>
+                        </View>
+                    </View>
+                    <Text style={{fontFamily: 'SourceSansPro-Regular', fontSize: 14, color: '#444', marginTop: 5, lineHeight: 22}}>We will be changing the name of our team to Monkey Business Fishing Team..</Text>
+                    <View style={{flexDirection: 'row', width: '100%', marginTop: 10}}>
+                        <View style={{width: '10%'}}>
+                            <SimpleLineIcons name="briefcase" size={16} color="#7f8082" />
+                        </View>
+                        <View style={{width: '90%'}}>
+                            <Text style={{fontFamily: 'SourceSansPro-Regular', fontSize: 14, color: '#7f8082'}}>Tokopedia Official</Text>
+                        </View>
+                    </View>
+                    <View style={{flexDirection: 'row', width: '100%', marginTop: 10}}>
+                        <View style={{width: '10%'}}>
+                            <SimpleLineIcons name="event" size={15} color="#7f8082" />
+                        </View>
+                        <View style={{width: '90%'}}>
+                            <Text style={{fontFamily: 'SourceSansPro-Regular', fontSize: 14, color: '#7f8082'}}>Jan, 27/2020 - Feb, 02/2020</Text>
+                        </View>
+                    </View>
                     <View style={{width: '100%', alignItems: 'flex-end'}}>
                         <TouchableOpacity style={{width: 50, height: 24, justifyContent: 'center', alignItems: 'flex-end'}}>
                             <Ionicons name="ios-arrow-round-forward" size={24} color="#444" />
@@ -35,9 +57,31 @@ const FeedEvent = (props) => {
                     </View>
                 </View>
                 <View style={{width: '82%', paddingLeft: 5}}>
-                    <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 14, color: '#444'}}>Need to Make a Design for a Team...</Text>
-                    <Text style={{fontFamily: 'SourceSansPro-Regular', fontSize: 14, color: '#444', marginTop: 5, lineHeight: 22}}>We will be changing the name of our team to Monkey Business Fishing Team. We have already started branding for....</Text>
-                    <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 14, color: '#323a5a', marginTop: 10}}>scholarship @dribbble</Text>
+                    <View style={{width: '100%', flexDirection: 'row'}}>
+                        <View style={{width: '70%'}}>
+                            <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 15, color: '#444'}}>Rotary Yoneyama Scholarship..</Text>
+                        </View>
+                        <View style={{width: '30%'}}>
+                            <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#fff', backgroundColor: '#444', alignSelf: 'flex-end', paddingHorizontal: 10, paddingVertical: 3, borderRadius: 4}}>Closed</Text>
+                        </View>
+                    </View>
+                    <Text style={{fontFamily: 'SourceSansPro-Regular', fontSize: 14, color: '#444', marginTop: 5, lineHeight: 22}}>Rotary Yoneyama Scholarship diberikan bagi mahasiswa yang berasal dari luar Jepang..</Text>
+                    <View style={{flexDirection: 'row', width: '100%', marginTop: 10}}>
+                        <View style={{width: '10%'}}>
+                            <SimpleLineIcons name="briefcase" size={16} color="#7f8082" />
+                        </View>
+                        <View style={{width: '90%'}}>
+                            <Text style={{fontFamily: 'SourceSansPro-Regular', fontSize: 14, color: '#7f8082'}}>Rotary Yoneyama</Text>
+                        </View>
+                    </View>
+                    <View style={{flexDirection: 'row', width: '100%', marginTop: 10}}>
+                        <View style={{width: '10%'}}>
+                            <SimpleLineIcons name="event" size={15} color="#7f8082" />
+                        </View>
+                        <View style={{width: '90%'}}>
+                            <Text style={{fontFamily: 'SourceSansPro-Regular', fontSize: 14, color: '#7f8082'}}>Sept, 01/2019 - Dec, 15/2019</Text>
+                        </View>
+                    </View>
                     <View style={{width: '100%', alignItems: 'flex-end'}}>
                         <TouchableOpacity style={{width: 50, height: 24, justifyContent: 'center', alignItems: 'flex-end'}}>
                             <Ionicons name="ios-arrow-round-forward" size={24} color="#444" />
@@ -52,9 +96,31 @@ const FeedEvent = (props) => {
                     </View>
                 </View>
                 <View style={{width: '82%', paddingLeft: 5}}>
-                    <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 14, color: '#444'}}>The Next Food Superstar.</Text>
-                    <Text style={{fontFamily: 'SourceSansPro-Regular', fontSize: 14, color: '#444', marginTop: 5, lineHeight: 22}}>Our organisation developed a browser-based Software as a Service solution to test IT Disaster Recovery plans on Microsoft Azure...</Text>
-                    <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 14, color: '#323a5a', marginTop: 10}}>seminar @ruangguru</Text>
+                    <View style={{width: '100%', flexDirection: 'row'}}>
+                        <View style={{width: '70%'}}>
+                            <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 15, color: '#444'}}>Business Group Seminar..</Text>
+                        </View>
+                        <View style={{width: '30%'}}>
+                            <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#444', backgroundColor: '#f1f1f1', alignSelf: 'flex-end', paddingHorizontal: 10, paddingVertical: 3, borderRadius: 4}}>Soon</Text>
+                        </View>
+                    </View>
+                    <Text style={{fontFamily: 'SourceSansPro-Regular', fontSize: 14, color: '#444', marginTop: 5, lineHeight: 22}}>"Guilt Free Selling" with Special Guest David Herbert David Herbert is now..</Text>
+                    <View style={{flexDirection: 'row', width: '100%', marginTop: 10}}>
+                        <View style={{width: '10%'}}>
+                            <SimpleLineIcons name="briefcase" size={16} color="#7f8082" />
+                        </View>
+                        <View style={{width: '90%'}}>
+                            <Text style={{fontFamily: 'SourceSansPro-Regular', fontSize: 14, color: '#7f8082'}}>ICC Bali</Text>
+                        </View>
+                    </View>
+                    <View style={{flexDirection: 'row', width: '100%', marginTop: 10}}>
+                        <View style={{width: '10%'}}>
+                            <SimpleLineIcons name="event" size={15} color="#7f8082" />
+                        </View>
+                        <View style={{width: '90%'}}>
+                            <Text style={{fontFamily: 'SourceSansPro-Regular', fontSize: 14, color: '#7f8082'}}>Feb, 12/2020</Text>
+                        </View>
+                    </View>
                     <View style={{width: '100%', alignItems: 'flex-end'}}>
                         <TouchableOpacity style={{width: 50, height: 24, justifyContent: 'center', alignItems: 'flex-end'}}>
                             <Ionicons name="ios-arrow-round-forward" size={24} color="#444" />
@@ -69,9 +135,31 @@ const FeedEvent = (props) => {
                     </View>
                 </View>
                 <View style={{width: '82%', paddingLeft: 5}}>
-                    <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 14, color: '#444'}}>A Job Now, More to Come</Text>
-                    <Text style={{fontFamily: 'SourceSansPro-Regular', fontSize: 14, color: '#444', marginTop: 5, lineHeight: 22}}>We will deliver courses within lifestyle/weight reduction/traning and also a webshop within nutrition.</Text>
-                    <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 14, color: '#323a5a', marginTop: 10}}>festival @tokopedia</Text>
+                    <View style={{width: '100%', flexDirection: 'row'}}>
+                        <View style={{width: '70%'}}>
+                            <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 15, color: '#444'}}>Seminyak Presents Eelke Klein.</Text>
+                        </View>
+                        <View style={{width: '30%'}}>
+                            <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#fff', backgroundColor: '#3b6fd6', alignSelf: 'flex-end', paddingHorizontal: 10, paddingVertical: 3, borderRadius: 4}}>Active</Text>
+                        </View>
+                    </View>
+                    <Text style={{fontFamily: 'SourceSansPro-Regular', fontSize: 14, color: '#444', marginTop: 5, lineHeight: 22}}>Eelke Kleijn is a rare talent. With work stretching across movie trailer scores, deep live shows..</Text>
+                    <View style={{flexDirection: 'row', width: '100%', marginTop: 10}}>
+                        <View style={{width: '10%'}}>
+                            <SimpleLineIcons name="briefcase" size={16} color="#7f8082" />
+                        </View>
+                        <View style={{width: '90%'}}>
+                            <Text style={{fontFamily: 'SourceSansPro-Regular', fontSize: 14, color: '#7f8082'}}>Woobar Bali</Text>
+                        </View>
+                    </View>
+                    <View style={{flexDirection: 'row', width: '100%', marginTop: 10}}>
+                        <View style={{width: '10%'}}>
+                            <SimpleLineIcons name="event" size={15} color="#7f8082" />
+                        </View>
+                        <View style={{width: '90%'}}>
+                            <Text style={{fontFamily: 'SourceSansPro-Regular', fontSize: 14, color: '#7f8082'}}>Feb, 08/2020 - Feb, 09/2020</Text>
+                        </View>
+                    </View>
                     <View style={{width: '100%', alignItems: 'flex-end'}}>
                         <TouchableOpacity style={{width: 50, height: 24, justifyContent: 'center', alignItems: 'flex-end'}}>
                             <Ionicons name="ios-arrow-round-forward" size={24} color="#444" />
