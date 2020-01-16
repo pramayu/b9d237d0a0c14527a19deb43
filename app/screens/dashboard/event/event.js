@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {
     View, Text, StatusBar, Dimensions,
-    TouchableOpacity
+    TouchableOpacity, Animated
 } from 'react-native';
 import Ionicons   from 'react-native-vector-icons/Ionicons';
 
@@ -9,7 +9,9 @@ import { style }  from '../../../styles/sty';
 import Header from '../../../components/event/header';
 import AgendaEvent from '../../../components/event/agenda';
 import FeedEvent from '../../../components/event/feed';
+import EventModal from '../../../components/event/modal';
 import { agendaEvent } from '../../../utils/service/agenda.event';
+import { showModal, hideModal } from '../../../utils/animated/animated.modal';
 
 const {width, height} = Dimensions.get('window');
 const currentDate = new Date()
@@ -23,9 +25,21 @@ class Event extends Component {
             currntMonth         : currentDate.getMonth() + 1,
             currentDats         : currentDate.getDate(),
             firstDay            : currentDate.getDay(),
-            currentCalendar     : []
+            chooseDate          : '',
+            currentCalendar     : [],
+            modals              : false
         },
         this.setCurrentCalendar = this.setCurrentCalendar.bind(this);
+        this.setChooseDate = this.setChooseDate.bind(this);
+        this.setModalStatus = this.setModalStatus.bind(this);
+        this.setShwModal = this.setShwModal.bind(this);
+        this.setHdeModal = this.setHdeModal.bind(this);
+        this.setHdeModal = this.setHdeModal.bind(this);
+
+        // animation modal
+        this.showmodale = new Animated.Value(0);
+        this.hidemodale = new Animated.Value(0);
+        this.modalopity = new Animated.Value(0);
     }
 
     componentDidMount = () => {
@@ -41,84 +55,49 @@ class Event extends Component {
         }
     }
 
-    rendeEventType = () => {
-        return ['contest','seminar', 'festival', 'scholarship'].map((eventtype, index) => {
-            return (
-                <TouchableOpacity key={index} style={{marginRight: 5, marginTop: 5}}>
-                    <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#ffffff', paddingHorizontal: 15, paddingVertical: 5,
-                    paddingTop: 6, borderRadius: 6, backgroundColor: '#455176', borderWidth: .5, borderColor: '#2e3853',}}>{eventtype.toUpperCase()}</Text>
-                </TouchableOpacity>
-            )
+    setChooseDate = (chooseDate) => {
+        this.setState({
+            chooseDate
         })
     }
 
-    renderWeeks = () => {
-        return ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'].map((day, index) => {
-            return (
-                <View key={index} style={{width: 40, alignItems: 'center', marginTop: 20}}>
-                    <Text style={{color: '#ffffff', fontFamily: 'SourceSansPro-SemiBold', fontSize: 12}}>{day.toUpperCase()}</Text>
-                </View>
-            )
-        })
+    // show modal function
+    setShwModal = () => {
+        showModal(this.showmodale, this.hidemodale);
     }
 
-    renderEmptyDate = () => {
-        return Array(this.state.firstDay).fill(0).map((xrt, index) => {
-            return (
-                <TouchableOpacity key={index} style={{width: 35, height: 35, justifyContent: 'center', alignItems: 'center',
-                    borderRadius: 100, marginHorizontal: 2.5, marginVertical: 2.5}}>
-                </TouchableOpacity>
-            )
-        })
+    // hide modal function
+    setHdeModal = () => {
+        hideModal(this.showmodale, this.hidemodale);
     }
 
-    renderCalendar = (calendars) => {
-        return calendars.map((calendar, index) => {
-                return (
-                    <TouchableOpacity key={index} style={{width: 35, height: 35, justifyContent: 'center', alignItems: 'center',
-                        borderRadius: 100, marginHorizontal: 2.5, marginVertical: 2.5, backgroundColor: calendar.daynum === this.state.currentDats ? '#ea4c89' : '#323a5a',
-                        elevation: calendar.daynum === this.state.currentDats ? 20 : 0, borderWidth: calendar.daynum === this.state.currentDats ? 1 : 0, borderColor: '#ffffff'}}>
-                        <Text style={{color: '#ffffff', fontFamily: 'SourceSansPro-SemiBold', fontSize: 14}}>{calendar.daynum}</Text>
-                    </TouchableOpacity>
-                )
-        })
+    setModalStatus = (modals) => {
+        this.setState({modals})
     }
 
     render() {
-        alert(this.state.firstDay)
+        const showmdle = this.showmodale.interpolate({
+            inputRange: [0, 1, 2],
+            outputRange: [height, -10, 0]
+        });
+        const hidemdle = this.hidemodale.interpolate({
+            inputRange: [0, 1, 2],
+            outputRange: [0, -10, height]
+        });
         return (
             <View style={[style.container,{paddingHorizontal: 20}]}>
                 <StatusBar barStyle="dark-content" backgroundColor="#ffffff" />
                 <View style={{width: '100%', height: height / 14}}>
-                    <Header />
+                    <Header setShwModal={this.setShwModal} setModalStatus={this.setModalStatus} />
                 </View>
                 <View style={{width: '100%', height: height / 1.1, marginTop: 20}}>
                     <FeedEvent />
                 </View>
-                <View style={{width: width, height: height, position: 'absolute', backgroundColor: 'rgba(255,255,255,.8)', zIndex: 999, paddingHorizontal: 20, justifyContent: 'center', alignItems: 'center'}}>
-                    <View style={{width: '100%', height: height / 1.5, backgroundColor: '#323a5a', borderRadius: 6, elevation: 20, paddingHorizontal: 15, paddingVertical: 10}}>
-                        <View style={{width: '100%', height: 24, flexDirection: 'row'}}>
-                            <View style={{width: '70%', height: '100%'}}>
-                                <Text style={{fontFamily: 'Brandon_Medium', fontSize: 12, color: '#ffffff', paddingTop: 3}}>FILTER EVENT</Text>
-                            </View>
-                            <View style={{width: '30%', height: '100%', alignItems: 'flex-end'}}>
-                                <TouchableOpacity onPress={(e) => setHideModale(props)} style={{width: 24, height: 24, alignItems: 'flex-end', justifyContent: "flex-start"}}>
-                                    <Ionicons name="ios-backspace" size={20} color="#ffffff"/>
-                                </TouchableOpacity>
-                            </View>
-                        </View>
-                        <View style={{width: '100%', flexDirection: 'row', flexWrap: 'wrap'}}>
-                            { this.renderWeeks() }
-                            { this.renderEmptyDate() }
-                            { this.renderCalendar(this.state.currentCalendar) }
-                        </View>
-                        <View style={{width: '100%', marginTop: 10}}>
-                            <View style={{width: '100%', flexDirection: 'row', marginTop: 5, flexWrap: 'wrap'}}>
-                                {this.rendeEventType()}
-                            </View>
-                        </View>
-                    </View>
-                </View>
+                <Animated.View style={{width: width, height: height, position: 'absolute', backgroundColor: 'rgba(255,255,255,.8)', zIndex: 999,
+                    paddingHorizontal: 20, justifyContent: 'center', alignItems: 'center', transform: [{translateY: this.state.modals === true ? hidemdle : showmdle}]}}>
+                    <EventModal firstDay={this.state.firstDay} calendars={this.state.currentCalendar} chooseDate={this.state.chooseDate} currentDats={this.state.currentDats}
+                        setChooseDate={this.setChooseDate} setHdeModal={this.setHdeModal} setModalStatus={this.setModalStatus}/>
+                </Animated.View>
             </View>
         )
     }

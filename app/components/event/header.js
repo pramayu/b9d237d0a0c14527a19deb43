@@ -15,7 +15,10 @@ const Header = (props) => {
                 </Animated.View>
             </View>
             <View style={{width: '10%', paddingTop: 12, alignItems: 'flex-end'}}>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={(e) => {
+                    props.setShwModal();
+                    props.setModalStatus(true);
+                    }}>
                     <SimpleLineIcons name="calendar" size={18} color="#444444"/>
                 </TouchableOpacity>
             </View>
