@@ -10,6 +10,7 @@ import DiscoverSchool     from '../screens/discoverschool/discoverschool';
 import VerifyUser         from '../screens/verify/verify';
 import Discoverclass      from '../screens/discoverclass/discoverclass';
 import FocusIn            from '../screens/dashboard/focus-in/focusin';
+import Event              from '../screens/dashboard/event/event';
 
 // check token
 import CheckRefreshToken  from '../screens/checktoken/checktoken';
@@ -43,6 +44,9 @@ const loggedScreenath = createStackNavigator({
   },
   FocusIn             : {
     screen: FocusIn
+  },
+  Event               : {
+    screen: Event
   }
 }, {
   headerMode: 'none'

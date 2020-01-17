@@ -11,7 +11,7 @@ const {width, height} = Dimensions.get('window');
 const FeedEvent = (props) => {
     return (
         <View style={{width: '100%', height: '100%'}}>
-            <View style={{width: '100%', flexDirection: 'row', marginBottom: 15}}>
+            <View style={{width: '100%', flexDirection: 'row', marginBottom: 30}}>
                 <View style={{width: '18%', alignItems: 'center', justifyContent: 'flex-start'}}>
                     <View style={{width: 40, height: 40, backgroundColor: '#323a5a', borderRadius: 100, justifyContent: 'center', alignItems: 'center'}}>
                         <SimpleLineIcons name="badge" size={18} color="#cde3e8" />
@@ -32,7 +32,7 @@ const FeedEvent = (props) => {
                             <SimpleLineIcons name="briefcase" size={16} color="#7f8082" />
                         </View>
                         <View style={{width: '90%'}}>
-                            <Text style={{fontFamily: 'SourceSansPro-Regular', fontSize: 14, color: '#7f8082'}}>Tokopedia Official</Text>
+                            <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 14, color: '#7f8082'}}>Tokopedia Official</Text>
                         </View>
                     </View>
                     <View style={{flexDirection: 'row', width: '100%', marginTop: 10}}>
@@ -40,17 +40,17 @@ const FeedEvent = (props) => {
                             <SimpleLineIcons name="event" size={15} color="#7f8082" />
                         </View>
                         <View style={{width: '90%'}}>
-                            <Text style={{fontFamily: 'SourceSansPro-Regular', fontSize: 14, color: '#7f8082'}}>Jan, 27/2020 - Feb, 02/2020</Text>
+                            <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 14, color: '#7f8082'}}>Jan, 27/2020 - Feb, 02/2020</Text>
                         </View>
                     </View>
-                    <View style={{width: '100%', alignItems: 'flex-end'}}>
+                    {/* <View style={{width: '100%', alignItems: 'flex-end'}}>
                         <TouchableOpacity style={{width: 50, height: 24, justifyContent: 'center', alignItems: 'flex-end'}}>
                             <Ionicons name="ios-arrow-round-forward" size={24} color="#444" />
                         </TouchableOpacity>
-                    </View>
+                    </View> */}
                 </View>
             </View>
-            <View style={{width: '100%', flexDirection: 'row', marginBottom: 15}}>
+            <View style={{width: '100%', flexDirection: 'row', marginBottom: 30}}>
                 <View style={{width: '18%', alignItems: 'center', justifyContent: 'flex-start'}}>
                     <View style={{width: 40, height: 40, backgroundColor: '#5c0d7c', borderRadius: 100, justifyContent: 'center', alignItems: 'center'}}>
                         <SimpleLineIcons name="graduation" size={18} color="#ffdfe6" />
@@ -71,7 +71,7 @@ const FeedEvent = (props) => {
                             <SimpleLineIcons name="briefcase" size={16} color="#7f8082" />
                         </View>
                         <View style={{width: '90%'}}>
-                            <Text style={{fontFamily: 'SourceSansPro-Regular', fontSize: 14, color: '#7f8082'}}>Rotary Yoneyama</Text>
+                            <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 14, color: '#7f8082'}}>Rotary Yoneyama</Text>
                         </View>
                     </View>
                     <View style={{flexDirection: 'row', width: '100%', marginTop: 10}}>
@@ -79,17 +79,17 @@ const FeedEvent = (props) => {
                             <SimpleLineIcons name="event" size={15} color="#7f8082" />
                         </View>
                         <View style={{width: '90%'}}>
-                            <Text style={{fontFamily: 'SourceSansPro-Regular', fontSize: 14, color: '#7f8082'}}>Sept, 01/2019 - Dec, 15/2019</Text>
+                            <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 14, color: '#7f8082'}}>Sept, 01/2019 - Dec, 15/2019</Text>
                         </View>
                     </View>
-                    <View style={{width: '100%', alignItems: 'flex-end'}}>
+                    {/* <View style={{width: '100%', alignItems: 'flex-end'}}>
                         <TouchableOpacity style={{width: 50, height: 24, justifyContent: 'center', alignItems: 'flex-end'}}>
                             <Ionicons name="ios-arrow-round-forward" size={24} color="#444" />
                         </TouchableOpacity>
-                    </View>
+                    </View> */}
                 </View>
             </View>
-            <View style={{width: '100%', flexDirection: 'row', marginBottom: 15}}>
+            <View style={{width: '100%', flexDirection: 'row', marginBottom: 30}}>
                 <View style={{width: '18%', alignItems: 'center', justifyContent: 'flex-start'}}>
                     <View style={{width: 40, height: 40, backgroundColor: '#4049bb', borderRadius: 100, justifyContent: 'center', alignItems: 'center'}}>
                         <SimpleLineIcons name="notebook" size={18} color="#cfd2ff" />
@@ -110,7 +110,7 @@ const FeedEvent = (props) => {
                             <SimpleLineIcons name="briefcase" size={16} color="#7f8082" />
                         </View>
                         <View style={{width: '90%'}}>
-                            <Text style={{fontFamily: 'SourceSansPro-Regular', fontSize: 14, color: '#7f8082'}}>ICC Bali</Text>
+                            <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 14, color: '#7f8082'}}>ICC Bali</Text>
                         </View>
                     </View>
                     <View style={{flexDirection: 'row', width: '100%', marginTop: 10}}>
@@ -118,17 +118,17 @@ const FeedEvent = (props) => {
                             <SimpleLineIcons name="event" size={15} color="#7f8082" />
                         </View>
                         <View style={{width: '90%'}}>
-                            <Text style={{fontFamily: 'SourceSansPro-Regular', fontSize: 14, color: '#7f8082'}}>Feb, 12/2020</Text>
+                            <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 14, color: '#7f8082'}}>Feb, 12/2020</Text>
                         </View>
                     </View>
-                    <View style={{width: '100%', alignItems: 'flex-end'}}>
+                    {/* <View style={{width: '100%', alignItems: 'flex-end'}}>
                         <TouchableOpacity style={{width: 50, height: 24, justifyContent: 'center', alignItems: 'flex-end'}}>
                             <Ionicons name="ios-arrow-round-forward" size={24} color="#444" />
                         </TouchableOpacity>
-                    </View>
+                    </View> */}
                 </View>
             </View>
-            <View style={{width: '100%', flexDirection: 'row', marginBottom: 15}}>
+            <View style={{width: '100%', flexDirection: 'row', marginBottom: 30}}>
                 <View style={{width: '18%', alignItems: 'center', justifyContent: 'flex-start'}}>
                     <View style={{width: 40, height: 40, backgroundColor: '#1cbbd1', borderRadius: 100, justifyContent: 'center', alignItems: 'center'}}>
                         <SimpleLineIcons name="earphones" size={18} color="#d4faff" />
@@ -149,7 +149,7 @@ const FeedEvent = (props) => {
                             <SimpleLineIcons name="briefcase" size={16} color="#7f8082" />
                         </View>
                         <View style={{width: '90%'}}>
-                            <Text style={{fontFamily: 'SourceSansPro-Regular', fontSize: 14, color: '#7f8082'}}>Woobar Bali</Text>
+                            <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 14, color: '#7f8082'}}>Woobar Bali</Text>
                         </View>
                     </View>
                     <View style={{flexDirection: 'row', width: '100%', marginTop: 10}}>
@@ -157,14 +157,14 @@ const FeedEvent = (props) => {
                             <SimpleLineIcons name="event" size={15} color="#7f8082" />
                         </View>
                         <View style={{width: '90%'}}>
-                            <Text style={{fontFamily: 'SourceSansPro-Regular', fontSize: 14, color: '#7f8082'}}>Feb, 08/2020 - Feb, 09/2020</Text>
+                            <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 14, color: '#7f8082'}}>Feb, 08/2020 - Feb, 09/2020</Text>
                         </View>
                     </View>
-                    <View style={{width: '100%', alignItems: 'flex-end'}}>
+                    {/* <View style={{width: '100%', alignItems: 'flex-end'}}>
                         <TouchableOpacity style={{width: 50, height: 24, justifyContent: 'center', alignItems: 'flex-end'}}>
                             <Ionicons name="ios-arrow-round-forward" size={24} color="#444" />
                         </TouchableOpacity>
-                    </View>
+                    </View> */}
                 </View>
             </View>
         </View>
