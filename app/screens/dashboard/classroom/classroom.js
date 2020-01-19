@@ -5,7 +5,9 @@ import {
 } from 'react-native';
 import { style }  from '../../../styles/sty';
 import Header from '../../../components/classroom/header';
-import MainMenu from '../../../components/classroom/mainmenu';
+import HeadText from '../../../components/classroom/headtext';
+import Stuff from '../../../components/classroom/stuff';
+import History from '../../../components/classroom/history';
 
 const {width, height} = Dimensions.get('window');
 
@@ -17,8 +19,14 @@ class ClassRoom extends Component {
                 <View style={{width: '100%', height: height / 14}}>
                     <Header />
                 </View>
-                <View style={{width: '100%', height: height / 3, marginTop: 20}}>
-                    <MainMenu />
+                <View style={{width: '100%', height: height / 10}}>
+                    <HeadText />
+                </View>
+                <View style={{width: '100%', height: height / 2.6, marginTop: 20}}>
+                    <Stuff />
+                </View>
+                <View style={{width: '100%', height: height / 2.8, marginTop: 20}}>
+                    <History />
                 </View>
             </View>
         )

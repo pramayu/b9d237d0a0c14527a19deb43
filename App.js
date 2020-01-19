@@ -22,7 +22,7 @@ const authLink = setContext(async(_,{headers}) => {
 });
 
 const httpLink = new HttpLink({
-  uri: 'http://192.168.1.9:5000/graphql'
+  uri: 'http://192.168.1.5:5000/graphql'
 });
 
 const cache = new InMemoryCache();
