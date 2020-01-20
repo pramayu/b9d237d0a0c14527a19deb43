@@ -1,9 +1,8 @@
 import React from 'react';
 import {
-    View, Text
+    View, Text, TouchableOpacity
 } from 'react-native';
 import SimpleLineIcons   from 'react-native-vector-icons/SimpleLineIcons';
-import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const Header = (props) => {
     return (
@@ -23,8 +22,8 @@ const Header = (props) => {
                     <SimpleLineIcons name="bell" size={16} color="#444" />
                 </TouchableOpacity>
             </View>
-            <View style={{width: '10%', paddingTop: 12, alignItems: 'flex-end'}}>
-                <TouchableOpacity>
+            <View style={{width: '10%', height: 24, paddingTop: 12, alignItems: 'flex-end'}}>
+                <TouchableOpacity onPress={(e) => props.setShowModal()}>
                     <SimpleLineIcons name="grid" size={15} color="#444" />
                 </TouchableOpacity>
             </View>

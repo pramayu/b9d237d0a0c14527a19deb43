@@ -8,7 +8,7 @@ const HeadText = (props) => {
         <View style={{width: '100%', height: '100%'}}>
             <View style={{width: '100%', flexDirection: 'row', marginTop: 10}}>
                 <View style={{width: '18%'}}>
-                    <View style={{width: 45, height: 45, borderRadius: 100, backgroundColor: '#fff', elevation: 10, borderColor: '#fff', borderWidth: .5}}>
+                    <View style={{width: 45, height: 45, borderRadius: 100, backgroundColor: '#fff', elevation: props.elevation === false ? 0 : 10, borderColor: '#fff', borderWidth: .5}}>
                         <Image style={{width: '100%', height: '100%', resizeMode: 'cover', borderRadius: 100}}
                         source={{uri: 'https://cdn.dribbble.com/users/1355613/screenshots/6317190/smoking_hot_2x.jpg'}}/>
                     </View>

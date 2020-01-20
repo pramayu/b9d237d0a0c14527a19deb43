@@ -9,54 +9,60 @@ const {width, height} = Dimensions.get('window');
 
 const MainMenu = (props) => {
     return (
-        <View style={{width: '100%', height: '100%', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between'}}>
-            <View style={{width: '25%', height: 70, justifyContent: 'center', alignItems: 'center', marginBottom: 10}}>
+        <View style={{width: '100%', height: '100%', flexDirection: 'row', flexWrap: 'wrap', marginTop: 20}}>
+            <View style={{width: '33%', height: '25%', justifyContent: 'center', alignItems: 'center', borderWidth: 0, borderColor: '#2b3350'}}>
                 <TouchableOpacity style={{width: 45, height: 45, borderRadius: 10, backgroundColor: '#323a5a', justifyContent: 'center', alignItems: 'center'}}>
-                    <SimpleLineIcons name="book-open" size={20} color="#ffcf6d" />
+                    <SimpleLineIcons name="book-open" size={20} color="#fff" />
                 </TouchableOpacity>
-                <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#21263c', marginTop: 5}}>BOOKS</Text>
+                <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#fff'}}>BOOKS</Text>
             </View>
-            <View style={{width: '25%', height: 70, justifyContent: 'center', alignItems: 'center', marginBottom: 10}}>
+            <View style={{width: '33%', height: '25%', justifyContent: 'center', alignItems: 'center', borderWidth: 1, borderColor: '#2b3350', borderBottomWidth: 0, borderTopWidth: 0}}>
                 <TouchableOpacity style={{width: 45, height: 45, borderRadius: 10, backgroundColor: '#323a5a', justifyContent: 'center', alignItems: 'center'}}>
-                    <SimpleLineIcons name="calendar" size={20} color="#ffcf6d" />
+                    <SimpleLineIcons name="calendar" size={20} color="#fff" />
                 </TouchableOpacity>
-                <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#21263c', marginTop: 5}}>SCHEDULE</Text>
+                <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#fff'}}>SCHEDULE</Text>
             </View>
-            <View style={{width: '25%', height: 70, justifyContent: 'center', alignItems: 'center', marginBottom: 10}}>
+            <View style={{width: '33%', height: '25%', justifyContent: 'center', alignItems: 'center', borderWidth: 0, borderColor: '#2b3350'}}>
                 <TouchableOpacity style={{width: 45, height: 45, borderRadius: 10, backgroundColor: '#323a5a', justifyContent: 'center', alignItems: 'center'}}>
-                    <SimpleLineIcons name="pencil" size={20} color="#ffcf6d" />
+                    <SimpleLineIcons name="pencil" size={20} color="#fff" />
                 </TouchableOpacity>
-                <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#21263c', marginTop: 5}}>TASK</Text>
+                <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#fff'}}>TASK</Text>
             </View>
-            <View style={{width: '25%', height: 70, justifyContent: 'center', alignItems: 'center', marginBottom: 10}}>
+            <View style={{width: '33%', height: '25%', justifyContent: 'center', alignItems: 'center', borderTopWidth: 1, borderColor: '#2b3350'}}>
                 <TouchableOpacity style={{width: 45, height: 45, borderRadius: 10, backgroundColor: '#323a5a', justifyContent: 'center', alignItems: 'center'}}>
-                    <SimpleLineIcons name="notebook" size={20} color="#ffcf6d" />
+                    <SimpleLineIcons name="notebook" size={20} color="#fff" />
                 </TouchableOpacity>
-                <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#21263c', marginTop: 5}}>REPORT</Text>
+                <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#fff'}}>REPORT</Text>
             </View>
-            <View style={{width: '25%', height: 70, justifyContent: 'center', alignItems: 'center', marginBottom: 10}}>
+            <View style={{width: '33%', height: '25%', justifyContent: 'center', alignItems: 'center', borderWidth: 1, borderColor: '#2b3350', borderBottomWidth: 0}}>
                 <TouchableOpacity style={{width: 45, height: 45, borderRadius: 10, backgroundColor: '#323a5a', justifyContent: 'center', alignItems: 'center'}}>
-                    <SimpleLineIcons name="badge" size={20} color="#ffcf6d" />
+                    <SimpleLineIcons name="badge" size={20} color="#fff" />
                 </TouchableOpacity>
-                <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#21263c', marginTop: 5}}>QUIZ</Text>
+                <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#fff'}}>QUIZ</Text>
             </View>
-            <View style={{width: '25%', height: 70, justifyContent: 'center', alignItems: 'center', marginBottom: 10}}>
+            <View style={{width: '33%', height: '25%', justifyContent: 'center', alignItems: 'center', borderTopWidth: 1, borderColor: '#2b3350'}}>
                 <TouchableOpacity style={{width: 45, height: 45, borderRadius: 10, backgroundColor: '#323a5a', justifyContent: 'center', alignItems: 'center'}}>
-                    <SimpleLineIcons name="bubbles" size={20} color="#ffcf6d" />
+                    <SimpleLineIcons name="bubbles" size={20} color="#fff" />
                 </TouchableOpacity>
-                <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#21263c', marginTop: 5}}>DISCUSS</Text>
+                <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#fff'}}>DISCUSS</Text>
             </View>
-            <View style={{width: '25%', height: 70, justifyContent: 'center', alignItems: 'center', marginBottom: 10}}>
+            <View style={{width: '33%', height: '25%', justifyContent: 'center', alignItems: 'center', borderTopWidth: 1, borderColor: '#2b3350'}}>
                 <TouchableOpacity style={{width: 45, height: 45, borderRadius: 10, backgroundColor: '#323a5a', justifyContent: 'center', alignItems: 'center'}}>
-                    <SimpleLineIcons name="earphones" size={20} color="#ffcf6d" />
+                    <SimpleLineIcons name="earphones" size={20} color="#fff" />
                 </TouchableOpacity>
-                <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#21263c', marginTop: 5}}>PODCAST</Text>
+                <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#fff'}}>PODCAST</Text>
             </View>
-            <View style={{width: '25%', height: 70, justifyContent: 'center', alignItems: 'center', marginBottom: 10}}>
+            <View style={{width: '33%', height: '25%', justifyContent: 'center', alignItems: 'center', borderWidth: 1, borderColor: '#2b3350', borderBottomWidth: 0}}>
                 <TouchableOpacity style={{width: 45, height: 45, borderRadius: 10, backgroundColor: '#323a5a', justifyContent: 'center', alignItems: 'center'}}>
-                    <SimpleLineIcons name="bubble" size={20} color="#ffcf6d" />
+                    <SimpleLineIcons name="bubble" size={20} color="#fff" />
                 </TouchableOpacity>
-                <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#21263c', marginTop: 5}}>TUTOR</Text>
+                <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#fff'}}>COUNSELING</Text>
+            </View>
+            <View style={{width: '33%', height: '25%', justifyContent: 'center', alignItems: 'center', borderTopWidth: 1, borderColor: '#2b3350'}}>
+                <TouchableOpacity style={{width: 45, height: 45, borderRadius: 10, backgroundColor: '#323a5a', justifyContent: 'center', alignItems: 'center'}}>
+                    <SimpleLineIcons name="user" size={20} color="#fff" />
+                </TouchableOpacity>
+                <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#fff'}}>TEACHER</Text>
             </View>
         </View>
     )

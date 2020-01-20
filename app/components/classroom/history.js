@@ -26,7 +26,7 @@ const History = (props) => {
             </View>
             <View style={{width: '100%', flexDirection: 'row', marginTop: 10}}>
                 <View style={{width: width / 3, height: '100%', marginRight: 20}}>
-                    <LinearGradient colors={['#6754b9','#3d2c88']} style={{width: '100%', height: width / 1.9, borderRadius: 6, elevation: 20, padding: 15}}>
+                    <LinearGradient colors={['#6754b9','#3d2c88']} style={{width: '100%', height: width / 1.9, borderRadius: 6, elevation: props.elevation === false ? 0 : 20, padding: 15}}>
                         <SimpleLineIcons name="calculator" size={20} color="#dcd4ff" />
                         <View style={{marginTop: 30}}>
                             <Text style={{fontSize: 12, fontFamily: 'SourceSansPro-SemiBold', color: '#dcd4ff'}}>MATH</Text>
@@ -40,7 +40,7 @@ const History = (props) => {
                     </LinearGradient>
                 </View>
                 <View style={{width: width / 3, height: '100%', marginRight: 20}}>
-                    <LinearGradient colors={['#9fb2ac','#505e5e']} style={{width: '100%', height: width / 1.9, borderRadius: 6, elevation: 20, padding: 15}}>
+                    <LinearGradient colors={['#9fb2ac','#505e5e']} style={{width: '100%', height: width / 1.9, borderRadius: 6, elevation: props.elevation === false ? 0 : 20, padding: 15}}>
                         <SimpleLineIcons name="chemistry" size={20} color="#e5fdf5" />
                         <View style={{marginTop: 30}}>
                             <Text style={{fontSize: 12, fontFamily: 'SourceSansPro-SemiBold', color: '#e5fdf5'}}>CHEMISTRY</Text>
@@ -54,7 +54,7 @@ const History = (props) => {
                     </LinearGradient>
                 </View>
                 <View style={{width: width / 3, height: '100%', marginRight: 20}}>
-                    <LinearGradient colors={['#f0a168','#c26c55']} style={{width: '100%', height: width / 1.9, borderRadius: 6, elevation: 20, padding: 15}}>
+                    <LinearGradient colors={['#f0a168','#c26c55']} style={{width: '100%', height: width / 1.9, borderRadius: 6, elevation: props.elevation === false ? 0 : 20, padding: 15}}>
                         <SimpleLineIcons name="energy" size={20} color="#ffebdc" />
                         <View style={{marginTop: 30}}>
                             <Text style={{fontSize: 12, fontFamily: 'SourceSansPro-SemiBold', color: '#ffebdc'}}>PHYSICS</Text>
