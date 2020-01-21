@@ -7,7 +7,7 @@ import AsyncStorage from '@react-native-community/async-storage';
 import {ApolloProvider} from 'react-apollo';
 
 import { MainRoute } from './app/routes/index';
-import ClassRoom from './app/screens/dashboard/classroom/classroom';
+import Schedule from './app/screens/dashboard/classroom/schedule/schedule';
 
 const authLink = setContext(async(_,{headers}) => {
   const x_access_token  = await AsyncStorage.getItem('accesstoken');
@@ -53,7 +53,7 @@ const client = new ApolloClient({
 const App = () => {
   return (
     <ApolloProvider client={client}>
-      <ClassRoom />
+      <Schedule />
     </ApolloProvider>
   )
 };

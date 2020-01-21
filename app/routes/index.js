@@ -11,6 +11,7 @@ import VerifyUser         from '../screens/verify/verify';
 import Discoverclass      from '../screens/discoverclass/discoverclass';
 import FocusIn            from '../screens/dashboard/focus-in/focusin';
 import Event              from '../screens/dashboard/event/event';
+import ClassRoom          from '../screens/dashboard/classroom/classroom';
 
 // check token
 import CheckRefreshToken  from '../screens/checktoken/checktoken';
@@ -47,6 +48,9 @@ const loggedScreenath = createStackNavigator({
   },
   Event               : {
     screen: Event
+  },
+  ClassRoom           : {
+    screen: ClassRoom
   }
 }, {
   headerMode: 'none'

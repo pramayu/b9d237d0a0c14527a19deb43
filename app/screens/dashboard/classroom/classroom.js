@@ -44,11 +44,11 @@ class ClassRoom extends Component {
     render() {
         const modalshow = this.showmodal.interpolate({
             inputRange: [0, 1, 2],
-            outputRange: [height, 20, 0]
+            outputRange: [height, -20, 0]
         });
         const modalhide = this.hidemodal.interpolate({
             inputRange: [0, 1, 2],
-            outputRange: [0, 20, height]
+            outputRange: [0, -20, height]
         });
         return (
             <View style={[style.container,{paddingHorizontal: 20}]}>
