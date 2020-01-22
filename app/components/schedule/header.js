@@ -18,7 +18,7 @@ const Header = (props) => {
                 </View>
             </View>
             <View style={{width: '25%', paddingTop: 12, alignItems: 'flex-end'}}>
-                <Text style={{color: '#444', fontSize: 12, fontFamily: 'Brandon_Medium', letterSpacing: 1}}>SEMESTER-01</Text>
+                <Text style={{color: '#444', fontSize: 12, fontFamily: 'Brandon_Medium', letterSpacing: 1}}>{props.currentMonth}, {props.currentYear}</Text>
             </View>
         </View>
     )

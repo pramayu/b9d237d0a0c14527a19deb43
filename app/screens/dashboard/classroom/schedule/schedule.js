@@ -6,11 +6,12 @@ import {
 import { style }  from '../../../../styles/sty';
 import Header from '../../../../components/schedule/header';
 import Calendar from '../../../../components/schedule/calendar';
+import Lesson from '../../../../components/schedule/lesson';
 import { getSchedule } from '../../../../utils/service/schedule.classroom';
 
 const {width, height} = Dimensions.get('window');
 const currentDate = new Date();
-const months = ['januari','februari','maret','april','mei','juni','juli','agustus','september','oktober','november','desember']
+const months = ['jan','feb','mar','apr','mei','jun','jul','aug','sep','oct','nov','des']
 
 class Schedule extends Component {
     constructor(props) {
@@ -18,7 +19,8 @@ class Schedule extends Component {
         this.state = {
             currentMonth: months[currentDate.getMonth()].toUpperCase(),
             currentWeek: [],
-            currentDate: currentDate.getDate()
+            currentDate: currentDate.getDate(),
+            currentYear: currentDate.getFullYear()
         }
     }
 
@@ -37,13 +39,19 @@ class Schedule extends Component {
 
     render () {
         return (
-            <View style={[style.container,{paddingHorizontal: 20}]}>
-                <StatusBar backgroundColor="#ffffff" barStyle="dark-content" />
-                <View style={{width: '100%', height: height / 14}}>
-                    <Header currentMonth={this.state.currentMonth} />
+            <View style={[style.container, {backgroundColor: '#ffffff'}]}>
+                <StatusBar backgroundColor="#f5f5f5" barStyle="dark-content" />
+                <View style={{width: '100%', height: height / 12, backgroundColor: '#f5f5f5', paddingHorizontal: 20}}>
+                    <Header currentDate={this.state.currentDate} currentMonth={this.state.currentMonth} currentYear={this.state.currentYear} currentDate={this.state.currentDate} />
                 </View>
-                <View style={{width: '100%', height: height / 7}}>
-                    <Calendar currentDate={this.state.currentDate} currentWeek={this.state.currentWeek} currentMonth={this.state.currentMonth} />
+                <View style={{width: '100%', height: height / 6, backgroundColor: '#f5f5f5'}}>
+                    <View style={{paddingHorizontal: 20, paddingTop: 20, backgroundColor: '#ffffff',
+                        borderTopRightRadius: 30, borderTopLeftRadius: 30, borderWidth: .5, borderColor: '#f1f1f1', borderBottomWidth: 0}}>
+                        <Calendar currentDate={this.state.currentDate} currentWeek={this.state.currentWeek} currentMonth={this.state.currentMonth} />
+                    </View>
+                </View>
+                <View style={{width: '100%', height: height / 1.4, paddingHorizontal: 30, marginTop: 20}}>
+                    <Lesson />
                 </View>
             </View>
         )

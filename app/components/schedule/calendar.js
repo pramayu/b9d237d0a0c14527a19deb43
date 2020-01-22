@@ -5,10 +5,10 @@ import {
 import SimpleLineIcons   from 'react-native-vector-icons/SimpleLineIcons';
 
 const renderWeek = () => {
-    return ['S','M','T','W','T','F','S'].map((day, index) => {
+    return ['MON','TUE','WED','THU','FRI','SAT','SUN'].map((day, index) => {
         return (
             <View key={index} style={{width: 40, height: 30, justifyContent: 'center', alignItems: 'center'}}>
-                <Text style={{fontFamily: 'Brandon_Medium', fontSize: 14, color: '#444'}}>{day}</Text>
+                <Text style={{fontFamily: 'Brandon_Bold', fontSize: 12, color: '#444'}}>{day}</Text>
             </View>
         )
     })
