@@ -32,7 +32,7 @@ class Books extends Component {
                 <View style={{width: '100%', height: height / 14}}>
                     <Header />
                 </View>
-                <View style={{width: '100%', height: height / 4}}>
+                <View style={{width: '100%', height: height / 5}}>
                     <HeadText search={this.state.search} setChangeSearch={this.setChangeSearch} />
                 </View>
                 <View style={{width: '100%', height: height / 1.55}}>

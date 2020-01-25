@@ -11,7 +11,7 @@ const HeadText = (props) => {
             <View style={{paddingRight: '30%'}}>
                 <Text style={{fontFamily: 'Brandon_Bold', fontSize: 28, color: '#323a5a'}}>What would you read, Paulina?</Text>
             </View>
-            <View style={{flexDirection: 'row', width: '100%', marginTop: 30}}>
+            <View style={{flexDirection: 'row', width: '100%', marginTop: 20}}>
                 <View style={{width: '10%'}}>
                     <View style={{width: '100%', height: 45, borderTopLeftRadius: 10, borderRightWidth: 0, borderWidth: 0, borderColor: '#fff',
                         borderBottomLeftRadius: 10, backgroundColor: '#f6f6f4', justifyContent: 'center', alignItems: 'flex-end', elevation: props.search.length > 0 ? 25 : 0}}>

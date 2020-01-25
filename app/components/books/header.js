@@ -18,9 +18,9 @@ const Header = (props) => {
                 </View>
             </View>
             <View style={{width: '25%', paddingTop: 12, alignItems: 'flex-end'}}>
-                <TouchableOpacity>
+                {/* <TouchableOpacity>
                     <SimpleLineIcons name="equalizer" size={16} color="#3d72de" />
-                </TouchableOpacity>
+                </TouchableOpacity> */}
             </View>
         </View>
     )
