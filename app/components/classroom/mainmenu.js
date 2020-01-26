@@ -11,19 +11,19 @@ const MainMenu = (props) => {
     return (
         <View style={{width: '100%', height: '100%', flexDirection: 'row', flexWrap: 'wrap', marginTop: 20}}>
             <View style={{width: '33%', height: '25%', justifyContent: 'center', alignItems: 'center', borderWidth: 0, borderColor: '#2b3350'}}>
-                <TouchableOpacity style={{width: 45, height: 45, borderRadius: 10, backgroundColor: '#323a5a', justifyContent: 'center', alignItems: 'center'}}>
+                <TouchableOpacity onPress={(e) => props.goToBooks()} style={{width: 45, height: 45, borderRadius: 10, backgroundColor: '#323a5a', justifyContent: 'center', alignItems: 'center'}}>
                     <SimpleLineIcons name="book-open" size={20} color="#fff" />
                 </TouchableOpacity>
                 <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#fff'}}>BOOKS</Text>
             </View>
             <View style={{width: '33%', height: '25%', justifyContent: 'center', alignItems: 'center', borderWidth: 1, borderColor: '#2b3350', borderBottomWidth: 0, borderTopWidth: 0}}>
-                <TouchableOpacity style={{width: 45, height: 45, borderRadius: 10, backgroundColor: '#323a5a', justifyContent: 'center', alignItems: 'center'}}>
+                <TouchableOpacity onPress={(e) => props.goToSchedule()} style={{width: 45, height: 45, borderRadius: 10, backgroundColor: '#323a5a', justifyContent: 'center', alignItems: 'center'}}>
                     <SimpleLineIcons name="calendar" size={20} color="#fff" />
                 </TouchableOpacity>
                 <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#fff'}}>SCHEDULE</Text>
             </View>
             <View style={{width: '33%', height: '25%', justifyContent: 'center', alignItems: 'center', borderWidth: 0, borderColor: '#2b3350'}}>
-                <TouchableOpacity style={{width: 45, height: 45, borderRadius: 10, backgroundColor: '#323a5a', justifyContent: 'center', alignItems: 'center'}}>
+                <TouchableOpacity onPress={(e) => props.goToTask()} style={{width: 45, height: 45, borderRadius: 10, backgroundColor: '#323a5a', justifyContent: 'center', alignItems: 'center'}}>
                     <SimpleLineIcons name="pencil" size={20} color="#fff" />
                 </TouchableOpacity>
                 <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#fff'}}>TASK</Text>

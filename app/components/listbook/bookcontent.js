@@ -38,13 +38,15 @@ const BookContent = (props) => {
                     </View>
                     <View style={{width: '100%', flexDirection: 'row', marginTop: 10}}>
                         <Text style={{fontFamily: 'PlayfairDisplay-Bold', fontSize: 16, color: '#444', alignSelf: 'flex-start'}}>The Connections in You</Text>
-                        <Ionicons name="ios-more" size={20} color="#ea4c89" style={{alignSelf: 'flex-start', marginLeft: 5}}/>
+                        <Ionicons name="ios-more" size={20} color="#ea4c89" style={{alignSelf: 'flex-start', marginLeft: 5, marginTop: 5}}/>
                     </View>
-                    <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 14, color: '#999', paddingTop: 2}}>Curtis Hewit</Text>
+                    <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 14, color: '#999'}}>Curtis Hewit</Text>
                 </View>
                 <View style={{width: '20%', alignItems: 'center'}}>
                     <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 14, color: '#444', paddingTop: 2}}>280</Text>
-                    <Ionicons name="ios-heart" size={20} color="#ea4c89" style={{marginBottom: 10}}/>
+                    <TouchableOpacity>
+                        <Ionicons name="ios-heart" size={20} color="#ea4c89" style={{marginBottom: 10}}/>
+                    </TouchableOpacity>
                     <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 14, color: '#444', paddingTop: 2}}>170</Text>
                     <Ionicons name="ios-glasses" size={22} color="#bbb" style={{marginBottom: 10}}/>
                     <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 14, color: '#444', paddingTop: 2}}>40</Text>
@@ -64,7 +66,9 @@ const BookContent = (props) => {
                 </View>
                 <View style={{width: '20%', alignItems: 'center'}}>
                     <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 14, color: '#444', paddingTop: 2}}>140</Text>
-                    <Ionicons name="ios-heart" size={20} color="#bbb" style={{marginBottom: 10}}/>
+                    <TouchableOpacity>
+                        <Ionicons name="ios-heart" size={20} color="#bbb" style={{marginBottom: 10}}/>
+                    </TouchableOpacity>
                     <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 14, color: '#444', paddingTop: 2}}>40</Text>
                     <Ionicons name="ios-glasses" size={22} color="#bbb" style={{marginBottom: 10}}/>
                     <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 14, color: '#444', paddingTop: 2}}>35</Text>

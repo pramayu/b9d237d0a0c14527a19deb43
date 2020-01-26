@@ -12,6 +12,10 @@ import Discoverclass      from '../screens/discoverclass/discoverclass';
 import FocusIn            from '../screens/dashboard/focus-in/focusin';
 import Event              from '../screens/dashboard/event/event';
 import ClassRoom          from '../screens/dashboard/classroom/classroom';
+// classroom
+import Schedule           from '../screens/dashboard/classroom/schedule/schedule';
+import Books              from '../screens/dashboard/classroom/books/book';
+import Task               from '../screens/dashboard/classroom/task/task';
 
 // check token
 import CheckRefreshToken  from '../screens/checktoken/checktoken';
@@ -51,6 +55,15 @@ const loggedScreenath = createStackNavigator({
   },
   ClassRoom           : {
     screen: ClassRoom
+  },
+  Schedule            : {
+    screen: Schedule
+  },
+  Books               : {
+    screen: Books
+  },
+  Task                : {
+    screen: Task
   }
 }, {
   headerMode: 'none'

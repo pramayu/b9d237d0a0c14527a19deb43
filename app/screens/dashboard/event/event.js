@@ -25,6 +25,7 @@ class Event extends Component {
             currntMonth         : currentDate.getMonth() + 1,
             currentDats         : currentDate.getDate(),
             firstDay            : currentDate.getDay(),
+            elevation           : 10,
             chooseDate          : '',
             currentCalendar     : [],
             modals              : false
@@ -64,16 +65,21 @@ class Event extends Component {
     // show modal function
     setShwModal = () => {
         showModal(this.showmodale, this.hidemodale);
+        this.setState({elevation: 0});
     }
 
     // hide modal function
     setHdeModal = () => {
         hideModal(this.showmodale, this.hidemodale);
+        setTimeout(() => {
+            this.setState({elevation: 10});
+        }, 500);
     }
 
     setModalStatus = (modals) => {
         this.setState({modals})
     }
+
 
     render() {
         const showmdle = this.showmodale.interpolate({
@@ -91,7 +97,7 @@ class Event extends Component {
                     <Header setShwModal={this.setShwModal} setModalStatus={this.setModalStatus} />
                 </View>
                 <View style={{width: '100%', height: height / 1.1, marginTop: 20}}>
-                    <FeedEvent />
+                    <FeedEvent elevation={this.state.elevation} />
                 </View>
                 <Animated.View style={{width: width, height: height, position: 'absolute', backgroundColor: 'rgba(255,255,255,.8)', zIndex: 999,
                     paddingHorizontal: 20, justifyContent: 'center', alignItems: 'center', transform: [{translateY: this.state.modals === true ? hidemdle : showmdle}]}}>

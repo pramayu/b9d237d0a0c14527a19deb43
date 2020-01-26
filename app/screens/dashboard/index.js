@@ -19,6 +19,7 @@ class Dashboard extends Component {
         this.state = {
 
         },
+        this.linkToClassRoom    = this.linkToClassRoom.bind(this);
         this.linkToFocusIn      = this.linkToFocusIn.bind(this);
         this.linkToEvent        = this.linkToEvent.bind(this);
     }
@@ -29,6 +30,10 @@ class Dashboard extends Component {
 
     linkToEvent = () => {
         this.props.navigation.navigate('Event');
+    }
+
+    linkToClassRoom = () => {
+        this.props.navigation.navigate('ClassRoom')
     }
 
     render() {
@@ -45,7 +50,7 @@ class Dashboard extends Component {
                     <Preview />
                 </View>
                 <View style={{width: '100%', height: height / 8, marginBottom: 15}}>
-                    <MainMenu linkToFocusIn={this.linkToFocusIn} linkToEvent={this.linkToEvent} />
+                    <MainMenu linkToFocusIn={this.linkToFocusIn} linkToEvent={this.linkToEvent} linkToClassRoom={this.linkToClassRoom} />
                 </View>
                 <View style={{width: '100%', height: height / 6}}>
                     <PinTask />

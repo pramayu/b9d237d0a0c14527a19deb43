@@ -81,8 +81,8 @@ class FocusIn extends Component {
         return (
             <View style={[style.container,{paddingHorizontal: 20}]}>
                 <StatusBar barStyle="dark-content" backgroundColor="#ffffff" />
-                <BeforeChoose />
-                {/* <AfterChoose status={this.state.status} scroll={this.state.scroll} modals={this.state.modals}
+                {/* <BeforeChoose /> */}
+                <AfterChoose status={this.state.status} scroll={this.state.scroll} modals={this.state.modals}
                     actionbutton={this.state.actionbutton} feedtype={this.state.feedtype} tags={this.state.tags} tag={this.state.tag}
                     setScrollAnimated={this.setScrollAnimated}
                     setStatusAnimated={this.setStatusAnimated}
@@ -90,7 +90,7 @@ class FocusIn extends Component {
                     setFeedType={this.setFeedType}
                     setFeedTags={this.setFeedTags}
                     setFeedTag={this.setFeedTag}
-                    setRemoveTag={this.setRemoveTag} /> */}
+                    setRemoveTag={this.setRemoveTag} />
             </View>
         )
     }

@@ -24,7 +24,7 @@ const MainMenu = (props) => {
                 <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#444444', marginTop: 5}}>EVENT</Text>
             </View>
             <View style={{width: 70, justifyContent: 'center', alignItems: 'center', marginRight: 15}}>
-                <TouchableOpacity style={{width: 45, height: 45, borderRadius: 10, backgroundColor: '#323a5a', justifyContent: 'center', alignItems: 'center', elevation: 10}}>
+                <TouchableOpacity onPress={(e) => props.linkToClassRoom()} style={{width: 45, height: 45, borderRadius: 10, backgroundColor: '#323a5a', justifyContent: 'center', alignItems: 'center', elevation: 10}}>
                     <SimpleLineIcons name="bubbles" size={20} color="#cde3e8" />
                 </TouchableOpacity>
                 <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#444444', marginTop: 5}}>CLASSROOM</Text>
