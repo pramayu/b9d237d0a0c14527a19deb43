@@ -5,6 +5,8 @@ import {
 } from 'react-native';
 import { style }  from '../../../../styles/sty';
 import Header from '../../../../components/task/header';
+import Categori from '../../../../components/task/categori';
+import ListTask from '../../../../components/task/listtask';
 
 const {width, height} = Dimensions.get('window');
 
@@ -58,6 +60,12 @@ class Task extends Component {
             <View style={[style.container,{paddingHorizontal: 20}]}>
                 <View style={{width:'100%', height: height / 14}}>
                     <Header switchOn={switchOn} switchOff={switchOff} onoff={this.state.onoff} setSwitchAccess={this.setSwitchAccess} />
+                </View>
+                <View style={{width:'100%', height: height / 10, paddingTop: 10}}>
+                    <Categori />
+                </View>
+                <View style={{width:'100%', height: height / 1.2}}>
+                    <ListTask />
                 </View>
             </View>
         )
