@@ -24,6 +24,7 @@ class ClassRoom extends Component {
         this.showmodal = new Animated.Value(0);
         this.hidemodal = new Animated.Value(0);
         this.goToTask = this.goToTask.bind(this);
+        this.goToReport = this.goToReport.bind(this);
         this.setShowModal = this.setShowModal.bind(this);
         this.setHideModal = this.setHideModal.bind(this);
         this.goToSchedule = this.goToSchedule.bind(this);
@@ -45,7 +46,7 @@ class ClassRoom extends Component {
 
 
     goToSchedule = () => {
-        this.props.navigation.navigate('Schedule')
+        this.props.navigation.navigate('Schedule');
     }
 
     goToBooks = () => {
@@ -53,7 +54,11 @@ class ClassRoom extends Component {
     }
 
     goToTask = () => {
-        this.props.navigation.navigate('Task')
+        this.props.navigation.navigate('Task');
+    }
+
+    goToReport = () => {
+        this.props.navigation.navigate('Report');
     }
 
     render() {
@@ -92,7 +97,7 @@ class ClassRoom extends Component {
                                 </TouchableOpacity>
                             </View>
                         </View>
-                        <MainMenu goToSchedule={this.goToSchedule} goToBooks={this.goToBooks} goToTask={this.goToTask} />
+                        <MainMenu goToSchedule={this.goToSchedule} goToBooks={this.goToBooks} goToTask={this.goToTask} goToReport={this.goToReport} />
                     </View>
                 </Animated.View>
             </View>

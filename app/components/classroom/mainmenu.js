@@ -29,7 +29,7 @@ const MainMenu = (props) => {
                 <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#fff'}}>TASK</Text>
             </View>
             <View style={{width: '33%', height: '25%', justifyContent: 'center', alignItems: 'center', borderTopWidth: 1, borderColor: '#2b3350'}}>
-                <TouchableOpacity style={{width: 45, height: 45, borderRadius: 10, backgroundColor: '#323a5a', justifyContent: 'center', alignItems: 'center'}}>
+                <TouchableOpacity onPress={(e) => props.goToReport()} style={{width: 45, height: 45, borderRadius: 10, backgroundColor: '#323a5a', justifyContent: 'center', alignItems: 'center'}}>
                     <SimpleLineIcons name="notebook" size={20} color="#fff" />
                 </TouchableOpacity>
                 <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#fff'}}>REPORT</Text>
