@@ -1,7 +1,8 @@
 import React from 'react';
 import {
-    View, Text, Image
+    View, Text, Image, TouchableOpacity
 } from 'react-native';
+import SimpleLineIcons   from 'react-native-vector-icons/SimpleLineIcons';
 
 const HeadText = (props) => {
     return (
@@ -13,9 +14,14 @@ const HeadText = (props) => {
                         source={{uri: 'https://cdn.dribbble.com/users/642793/screenshots/8193761/untitled_artwork_60.jpg'}}/>
                     </View>
                 </View>
-                <View style={{width: '82%'}}>
+                <View style={{width: '45%'}}>
                     <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 14, color: '#444', marginBottom: 5}}>Dmitro Petrenko</Text>
-                    <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#ffffff', alignSelf: 'flex-start', paddingHorizontal: 10, paddingVertical: 2, borderRadius: 4, backgroundColor: '#3d72de'}}>KELAS-XII</Text>
+                    <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#eef3ff', alignSelf: 'flex-start', paddingHorizontal: 10, paddingVertical: 2, borderRadius: 4, backgroundColor: '#3d72de'}}>KELAS-XIIA</Text>
+                </View>
+                <View style={{width: '37%', alignItems: 'flex-end', justifyContent: 'flex-end'}}>
+                    <TouchableOpacity style={{width: 40, height: 40, backgroundColor: '#3d72de', borderRadius: 10, justifyContent: 'center', alignItems: 'center'}}>
+                        <SimpleLineIcons name="equalizer" size={18} color="#eef3ff" />
+                    </TouchableOpacity>
                 </View>
             </View>
         </View>

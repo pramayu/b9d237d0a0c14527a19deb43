@@ -13,14 +13,12 @@ const Header = (props) => {
                         <SimpleLineIcons name="notebook" size={20} color="#3d72de" />
                     </View>
                     <View style={{width: '90%'}}>
-                        <Text style={{color: '#444', fontSize: 12, letterSpacing: 1, paddingTop: 3, paddingLeft: 5, fontFamily: 'Brandon_Medium'}}>REPORT/05</Text>
+                        <Text style={{color: '#444', fontSize: 12, paddingTop: 3, paddingLeft: 5, fontFamily: 'Brandon_Medium'}}>SEMESTER/06</Text>
                     </View>
                 </View>
             </View>
             <View style={{width: '25%', paddingTop: 12, alignItems: 'flex-end'}}>
-                <TouchableOpacity>
-                    <SimpleLineIcons name="equalizer" size={18} color="#3d72de" />
-                </TouchableOpacity>
+                {/* <Text style={{color: '#444', fontSize: 12, fontFamily: 'Brandon_Medium', letterSpacing: 1}}>SEMESTER/06</Text> */}
             </View>
         </View>
     )
