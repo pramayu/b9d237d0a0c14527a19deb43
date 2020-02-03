@@ -33,8 +33,8 @@ const History = (props) => {
                             <Text style={{fontSize: 16, fontFamily: 'PlayfairDisplay-Bold', color: '#fff'}}>Coordinate Geometry</Text>
                             <Text style={{fontSize: 12, fontFamily: 'SourceSansPro-Regular', color: '#dcd4ff'}}>Thu, Nov 20</Text>
                         </View>
-                        <View style={{width: '100%', height: 8, borderRadius: 4, backgroundColor: '#6754b9', marginTop: 15, justifyContent: 'center', paddingHorizontal: 2}}>
-                            <View style={{width: '50%', height: 4, borderRadius: 2, backgroundColor: '#3d2c88'}}></View>
+                        <View style={{width: '100%', height: 6, borderRadius: 4, backgroundColor: '#3d2c88', marginTop: 15, justifyContent: 'center', paddingHorizontal: 2}}>
+                            <View style={{width: '50%', height: 4, borderRadius: 2, backgroundColor: '#6754b9'}}></View>
                         </View>
                         <Text style={{fontSize: 12, fontFamily: 'SourceSansPro-SemiBold', color: '#dcd4ff', marginTop: 5}}>5 of 10 lessons</Text>
                     </LinearGradient>
@@ -47,8 +47,8 @@ const History = (props) => {
                             <Text style={{fontSize: 16, fontFamily: 'PlayfairDisplay-Bold', color: '#fff'}}>Quantum Numbers</Text>
                             <Text style={{fontSize: 12, fontFamily: 'SourceSansPro-Regular', color: '#e5fdf5'}}>Thu, Nov 20</Text>
                         </View>
-                        <View style={{width: '100%', height: 8, borderRadius: 4, backgroundColor: '#9fb2ac', marginTop: 15, justifyContent: 'center', paddingHorizontal: 2}}>
-                            <View style={{width: '45%', height: 4, borderRadius: 2, backgroundColor: '#505e5e'}}></View>
+                        <View style={{width: '100%', height: 6, borderRadius: 4, backgroundColor: '#505e5e', marginTop: 15, justifyContent: 'center', paddingHorizontal: 2}}>
+                            <View style={{width: '45%', height: 4, borderRadius: 2, backgroundColor: '#9fb2ac'}}></View>
                         </View>
                         <Text style={{fontSize: 12, fontFamily: 'SourceSansPro-SemiBold', color: '#e5fdf5', marginTop: 5}}>7 of 15 lessons</Text>
                     </LinearGradient>
@@ -61,8 +61,8 @@ const History = (props) => {
                             <Text style={{fontSize: 16, fontFamily: 'PlayfairDisplay-Bold', color: '#fff'}}>Micrometer Screw</Text>
                             <Text style={{fontSize: 12, fontFamily: 'SourceSansPro-Regular', color: '#ffebdc'}}>Thu, Nov 20</Text>
                         </View>
-                        <View style={{width: '100%', height: 8, borderRadius: 4, backgroundColor: '#f0a168', marginTop: 15, justifyContent: 'center', paddingHorizontal: 2}}>
-                            <View style={{width: '70%', height: 4, borderRadius: 2, backgroundColor: '#c26c55'}}></View>
+                        <View style={{width: '100%', height: 6, borderRadius: 4, backgroundColor: '#c26c55', marginTop: 15, justifyContent: 'center', paddingHorizontal: 2}}>
+                            <View style={{width: '70%', height: 4, borderRadius: 2, backgroundColor: '#f0a168'}}></View>
                         </View>
                         <Text style={{fontSize: 12, fontFamily: 'SourceSansPro-SemiBold', color: '#ffebdc', marginTop: 5}}>10 of 17 lessons</Text>
                     </LinearGradient>

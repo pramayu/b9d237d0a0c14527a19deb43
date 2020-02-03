@@ -23,6 +23,7 @@ class ClassRoom extends Component {
         }
         this.showmodal = new Animated.Value(0);
         this.hidemodal = new Animated.Value(0);
+        this.goToQuiz = this.goToQuiz.bind(this);
         this.goToTask = this.goToTask.bind(this);
         this.goToReport = this.goToReport.bind(this);
         this.setShowModal = this.setShowModal.bind(this);
@@ -61,6 +62,10 @@ class ClassRoom extends Component {
         this.props.navigation.navigate('Report');
     }
 
+    goToQuiz = () => {
+        this.props.navigation.navigate('QuizStudent')
+    }
+
     render() {
         const modalshow = this.showmodal.interpolate({
             inputRange: [0, 1, 2],
@@ -97,7 +102,7 @@ class ClassRoom extends Component {
                                 </TouchableOpacity>
                             </View>
                         </View>
-                        <MainMenu goToSchedule={this.goToSchedule} goToBooks={this.goToBooks} goToTask={this.goToTask} goToReport={this.goToReport} />
+                        <MainMenu goToSchedule={this.goToSchedule} goToBooks={this.goToBooks} goToTask={this.goToTask} goToReport={this.goToReport} goToQuiz={this.goToQuiz} />
                     </View>
                 </Animated.View>
             </View>

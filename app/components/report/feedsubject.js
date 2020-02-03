@@ -112,8 +112,8 @@ const FeedSubject = (props) => {
                     <View style={{width: '50%', height: '100%'}}>
                         <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 14, color: '#444'}}>Ofuda Halloween</Text>
                         <Text style={{fontFamily: 'Brandon_Medium', fontSize: 12, color: '#444'}}>EXP +28500</Text>
-                        <View style={{width: '100%', flexDirection: 'row', height: 4, backgroundColor: '#fff', borderRadius: 4, marginTop: 3}}>
-                            <LinearGradient start={{x: 0, y: 0}} end={{x: 1, y: 1}} colors={['#3d72de', '#67d1e0']} style={{width: '95%', height: '100%', backgroundColor: '#3d72de', borderRadius: 4}}></LinearGradient>
+                        <View style={{width: '100%', flexDirection: 'row', height: 5, backgroundColor: '#fff', borderRadius: 4, marginTop: 3}}>
+                            <LinearGradient start={{x: 0, y: 0}} end={{x: 1, y: 1}} colors={['#3d72de', '#67d1e0']} style={{width: '95%', height: '100%', backgroundColor: '#3d72de', borderRadius: 4, elevation: 2}}></LinearGradient>
                         </View>
                     </View>
                     <View style={{width: '33%', height: '100%', alignItems: 'flex-end', justifyContent: 'center'}}>
@@ -130,8 +130,8 @@ const FeedSubject = (props) => {
                     <View style={{width: '50%', height: '100%'}}>
                         <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 14, color: '#444'}}>Lotus Riso</Text>
                         <Text style={{fontFamily: 'Brandon_Medium', fontSize: 12, color: '#444'}}>EXP +28500</Text>
-                        <View style={{width: '90%', flexDirection: 'row', height: 4, backgroundColor: '#fff', borderRadius: 4, marginTop: 3}}>
-                            <LinearGradient start={{x: 0, y: 0}} end={{x: 1, y: 1}} colors={['#3d72de', '#67d1e0']} style={{width: '95%', height: '100%', backgroundColor: '#3d72de', borderRadius: 4}}></LinearGradient>
+                        <View style={{width: '100%', flexDirection: 'row', height: 5, backgroundColor: '#fff', borderRadius: 4, marginTop: 3}}>
+                            <LinearGradient start={{x: 0, y: 0}} end={{x: 1, y: 1}} colors={['#3d72de', '#67d1e0']} style={{width: '85%', height: '100%', backgroundColor: '#3d72de', borderRadius: 4, elevation: 2}}></LinearGradient>
                         </View>
                     </View>
                     <View style={{width: '33%', height: '100%', alignItems: 'flex-end', justifyContent: 'center'}}>
@@ -148,8 +148,8 @@ const FeedSubject = (props) => {
                     <View style={{width: '50%', height: '100%'}}>
                         <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 14, color: '#444'}}>Scott Summertime</Text>
                         <Text style={{fontFamily: 'Brandon_Medium', fontSize: 12, color: '#444'}}>EXP +27800</Text>
-                        <View style={{width: '85%', flexDirection: 'row', height: 4, backgroundColor: '#fff', borderRadius: 4, marginTop: 3}}>
-                            <LinearGradient start={{x: 0, y: 0}} end={{x: 1, y: 1}} colors={['#3d72de', '#67d1e0']} style={{width: '95%', height: '100%', backgroundColor: '#3d72de', borderRadius: 4}}></LinearGradient>
+                        <View style={{width: '100%', flexDirection: 'row', height: 5, backgroundColor: '#fff', borderRadius: 4, marginTop: 3}}>
+                            <LinearGradient start={{x: 0, y: 0}} end={{x: 1, y: 1}} colors={['#3d72de', '#67d1e0']} style={{width: '80%', height: '100%', backgroundColor: '#3d72de', borderRadius: 4, elevation: 2}}></LinearGradient>
                         </View>
                     </View>
                     <View style={{width: '33%', height: '100%', alignItems: 'flex-end', justifyContent: 'center'}}>
