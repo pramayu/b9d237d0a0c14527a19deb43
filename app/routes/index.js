@@ -18,6 +18,7 @@ import Books              from '../screens/dashboard/classroom/books/book';
 import Task               from '../screens/dashboard/classroom/task/task';
 import Report             from '../screens/dashboard/classroom/report/report';
 import QuizStudent        from '../screens/dashboard/classroom/quiz/quiz';
+import Discuss            from '../screens/dashboard/classroom/discuss/discuss';
 
 // check token
 import CheckRefreshToken  from '../screens/checktoken/checktoken';
@@ -72,6 +73,9 @@ const loggedScreenath = createStackNavigator({
   },
   QuizStudent         : {
     screen: QuizStudent
+  },
+  Discuss             : {
+    screen: Discuss
   }
 }, {
   headerMode: 'none'
