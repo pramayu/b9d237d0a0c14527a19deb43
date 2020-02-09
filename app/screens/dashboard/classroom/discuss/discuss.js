@@ -28,7 +28,6 @@ class Discuss extends Component {
     setTags = (tag, e) => {
         if(e === ' ') {
             this.setState({
-                modal: false,
                 tags: [...this.state.tags, tag],
                 tag: ''
             })
