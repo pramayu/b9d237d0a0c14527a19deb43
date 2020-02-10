@@ -7,20 +7,20 @@ import SimpleLineIcons   from 'react-native-vector-icons/SimpleLineIcons';
 
 const MenuSubject = (props) => {
     return (
-        <View style={{width: '100%', height: '100%', flexDirection: 'row', paddingTop: 15}}>
-           <TouchableOpacity style={{marginRight: 8}}>
-               <Text style={{fontFamily: 'SourceSansPro-SemiBold', color: '#ffffff', fontSize: 14, paddingHorizontal: 12, paddingVertical: 4, borderRadius: 10, backgroundColor: '#323a5a'}}>Overview</Text>
+        <View style={{width: '100%', height: '100%', flexDirection: 'row', paddingTop: 10}}>
+           <TouchableOpacity style={{marginRight: 35}}>
+               <Text style={{fontFamily: 'SourceSansPro-SemiBold', color: '#323a5a', fontSize: 13, paddingVertical: 4}}>OVERVIEW</Text>
+               <View style={{width: 15, height: 2, backgroundColor: "#3d72de", borderRadius: 2}}></View>
            </TouchableOpacity>
-           {/* show after search button pressed */}
-           {/* <TouchableOpacity style={{marginRight: 8}}>
-               <Text style={{fontFamily: 'SourceSansPro-SemiBold', color: '#323a5a', fontSize: 14, paddingHorizontal: 12, paddingVertical: 4, borderRadius: 10}}>B.Indonesia</Text>
+           <TouchableOpacity style={{marginRight: 35}}>
+                <Text style={{fontFamily: 'SourceSansPro-SemiBold', color: '#cfcfcf', fontSize: 12, paddingVertical: 4}}>B.INDONESIA</Text>
            </TouchableOpacity>
-           <TouchableOpacity style={{marginRight: 8}}>
-               <Text style={{fontFamily: 'SourceSansPro-SemiBold', color: '#323a5a', fontSize: 14, paddingHorizontal: 12, paddingVertical: 4, borderRadius: 10}}>Chemistry</Text>
+           <TouchableOpacity style={{marginRight: 35}}>
+                <Text style={{fontFamily: 'SourceSansPro-SemiBold', color: '#cfcfcf', fontSize: 12, paddingVertical: 4}}>CHEMISTRY</Text>
            </TouchableOpacity>
-           <TouchableOpacity style={{marginRight: 8}}>
-               <Text style={{fontFamily: 'SourceSansPro-SemiBold', color: '#323a5a', fontSize: 14, paddingHorizontal: 12, paddingVertical: 4, borderRadius: 10}}>Biology</Text>
-           </TouchableOpacity> */}
+           <TouchableOpacity style={{marginRight: 35}}>
+                <Text style={{fontFamily: 'SourceSansPro-SemiBold', color: '#cfcfcf', fontSize: 12, paddingVertical: 4}}>BIOLOGY</Text>
+           </TouchableOpacity>
         </View>
     )
 }
