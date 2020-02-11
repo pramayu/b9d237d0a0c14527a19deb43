@@ -31,6 +31,7 @@ class ClassRoom extends Component {
         this.setShowModal = this.setShowModal.bind(this);
         this.setHideModal = this.setHideModal.bind(this);
         this.goToSchedule = this.goToSchedule.bind(this);
+        this.goToCounseling = this.goToCounseling.bind(this);
     }
 
     
@@ -76,6 +77,10 @@ class ClassRoom extends Component {
         this.props.navigation.navigate('Audiobook')
     }
 
+    goToCounseling = () => {
+        this.props.navigation.navigate('Counseling')
+    }
+
     render() {
         const modalshow = this.showmodal.interpolate({
             inputRange: [0, 1, 2],
@@ -113,7 +118,8 @@ class ClassRoom extends Component {
                             </View>
                         </View>
                         <MainMenu goToSchedule={this.goToSchedule} goToBooks={this.goToBooks} goToTask={this.goToTask}
-                            goToReport={this.goToReport} goToQuiz={this.goToQuiz} goToDiscuss={this.goToDiscuss} goToAudiobook={this.goToAudiobook} />
+                            goToReport={this.goToReport} goToQuiz={this.goToQuiz} goToDiscuss={this.goToDiscuss} goToAudiobook={this.goToAudiobook}
+                            goToCounseling={this.goToCounseling} />
                     </View>
                 </Animated.View>
             </View>

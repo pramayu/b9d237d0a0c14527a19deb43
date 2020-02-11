@@ -20,6 +20,7 @@ import Report             from '../screens/dashboard/classroom/report/report';
 import QuizStudent        from '../screens/dashboard/classroom/quiz/quiz';
 import Discuss            from '../screens/dashboard/classroom/discuss/discuss';
 import Audiobook          from '../screens/dashboard/classroom/audiobook/audiobook';
+import Counseling         from '../screens/dashboard/classroom/counseling/couseling';
 
 // check token
 import CheckRefreshToken  from '../screens/checktoken/checktoken';
@@ -80,6 +81,9 @@ const loggedScreenath = createStackNavigator({
   },
   Audiobook             : {
     screen: Audiobook
+  },
+  Counseling            : {
+    screen: Counseling
   }
 }, {
   headerMode: 'none'
