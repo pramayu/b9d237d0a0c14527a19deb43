@@ -109,11 +109,11 @@ class ClassRoom extends Component {
                     <View style={{width: '100%', height: height / 2, backgroundColor: '#323a5a', borderRadius: 6, elevation: 20, paddingHorizontal: 15, paddingVertical: 10}}>
                         <View style={{width: '100%', height: 24, flexDirection: 'row'}}>
                             <View style={{width: '70%', height: '100%'}}>
-                                <Text style={{fontFamily: 'Brandon_Medium', fontSize: 12, color: '#ffffff', paddingTop: 3}}>FILTER EVENT</Text>
+                                <Text style={{fontFamily: 'Brandon_Medium', fontSize: 12, color: '#fbe610', paddingTop: 3}}>FILTER EVENT</Text>
                             </View>
                             <View style={{width: '30%', height: '100%', alignItems: 'flex-end'}}>
                                 <TouchableOpacity onPress={(e) => this.setHideModal()} style={{width: 24, height: 24, alignItems: 'flex-end', justifyContent: "flex-start"}}>
-                                    <Ionicons name="ios-backspace" size={20} color="#ffffff"/>
+                                    <Ionicons name="ios-backspace" size={20} color="#fbe610"/>
                                 </TouchableOpacity>
                             </View>
                         </View>
