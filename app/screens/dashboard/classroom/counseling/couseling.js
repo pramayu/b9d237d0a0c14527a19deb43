@@ -128,6 +128,10 @@ class Counseling extends Component {
         })
     }
 
+    screenToChating = () => {
+        this.props.navigation.navigate('UserChat')
+    }
+
     render() {
         const switchOn = this.switchButtonOn.interpolate({
             inputRange: [0, 1],
@@ -157,10 +161,10 @@ class Counseling extends Component {
             <View style={[style.container,{paddingHorizontal: 20}]}>
                 <StatusBar backgroundColor="#ffffff" barStyle="dark-content" />
                 <View style={{width: '100%', height: height / 14}}>
-                    <Header switchOn={switchOn} switchOff={switchOff} onoff={this.state.onoff} setSwitchAccess={this.setSwitchAccess} />
+                    <Header switchOn={switchOn} switchOff={switchOff} onoff={this.state.onoff} setSwitchAccess={this.setSwitchAccess} screen={"counseling"} />
                 </View>
                 <View style={{width: '100%', height: height / 1.12}}>
-                    <Conversation />
+                    <Conversation screenToChating={this.screenToChating} />
                 </View>
                 <View style={{width: 45, height: 45, position: 'absolute', borderRadius: 100, bottom: 20, right: 20, elevation: this.state.elevation, backgroundColor: '#ededed', zIndex: 99}}>
                     <TouchableOpacity onPress={(e) => this.setShowModal()} style={{width: '100%', height: '100%', justifyContent: 'center', borderRadius: 100, alignItems: 'center', backgroundColor: '#3d72de', borderWidth: 1, borderColor: '#fff'}}>

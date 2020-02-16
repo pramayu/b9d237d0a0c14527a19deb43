@@ -4,8 +4,9 @@ import {
     TouchableOpacity
 } from 'react-native';
 import SimpleLineIcons   from 'react-native-vector-icons/SimpleLineIcons';
+import Ionicons   from 'react-native-vector-icons/Ionicons';
 
-const Header = (props) => {
+const counselingScreen = (props) => {
     return (
         <View style={{width: '100%', height: '100%', flexDirection: 'row'}}>
             <View style={{width: '60%'}}>
@@ -24,6 +25,32 @@ const Header = (props) => {
             </View>
         </View>
     )
+};
+
+const userChatScreen = (props) => {
+    return (
+        <View style={{width: '100%', height: '100%', flexDirection: 'row'}}>
+            <View style={{width: '15%'}}>
+                <TouchableOpacity style={{width: 40, height: '100%', justifyContent: 'center', alignItems: 'flex-start'}}>
+                    <Ionicons name="ios-arrow-round-back" size={28} color="#3d72de" />
+                </TouchableOpacity>
+            </View>
+            <View style={{width: '70%', justifyContent: 'center', alignItems: 'center'}}>
+                <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 14, color: '#323a5a'}}>Nilo Dalagan</Text>
+            </View>
+            <View style={{width: '15%', paddingTop: 13, alignItems: 'flex-end'}}>
+                
+            </View>
+        </View>
+    )
+}
+
+const Header = (props) => {
+    if(props.screen === "counseling") {
+        return counselingScreen(props)
+    } else if(props.screen === "userchat") {
+        return userChatScreen(props)
+    }
 }
 
 export default Header;

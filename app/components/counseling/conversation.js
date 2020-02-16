@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-    View, Text, Dimensions, Image
+    View, Text, Dimensions, Image, TouchableOpacity
 } from 'react-native';
 
 const {width, height} = Dimensions.get('window');
@@ -22,6 +22,9 @@ const Conversation = (props) => {
                 <View style={{width: '20%', height: '100%', justifyContent: 'center', alignItems: 'flex-end'}}>
                     <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 14, color: '#323a5a'}}>07:21PM</Text>
                 </View>
+                <TouchableOpacity onPress={(e) => props.screenToChating()} style={{width: '100%', height: '100%', position: 'absolute', zIndex: 999}}>
+                    <Text></Text>
+                </TouchableOpacity>
             </View>
             <View style={{width: '100%', height: width / 5.5, flexDirection: 'row', marginBottom: 10}}>
                 <View style={{width: '20%', height: '100%', justifyContent: 'center'}}>
