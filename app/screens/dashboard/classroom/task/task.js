@@ -58,6 +58,7 @@ class Task extends Component {
         });
         return (
             <View style={[style.container,{paddingHorizontal: 20}]}>
+                <StatusBar backgroundColor="#f5f5f5" barStyle="dark-content" />
                 <View style={{width:'100%', height: height / 14}}>
                     <Header switchOn={switchOn} switchOff={switchOff} onoff={this.state.onoff} setSwitchAccess={this.setSwitchAccess} />
                 </View>

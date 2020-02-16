@@ -20,6 +20,7 @@ import Report             from '../screens/dashboard/classroom/report/report';
 import QuizStudent        from '../screens/dashboard/classroom/quiz/quiz';
 import Discuss            from '../screens/dashboard/classroom/discuss/discuss';
 import Audiobook          from '../screens/dashboard/classroom/audiobook/audiobook';
+import Teachers           from '../screens/dashboard/classroom/teacher/teacher';
 //Counseling
 import Counseling         from '../screens/dashboard/classroom/counseling/couseling';
 import UserChat           from '../screens/dashboard/classroom/counseling/chat';
@@ -89,6 +90,9 @@ const loggedScreenath = createStackNavigator({
   },
   UserChat              : {
     screen: UserChat
+  },
+  Teachers              : {
+    screen: Teachers
   }
 }, {
   headerMode: 'none'
