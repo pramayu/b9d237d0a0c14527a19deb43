@@ -9,7 +9,6 @@ import HeadText from '../../components/dashboard/headtext';
 import Preview from '../../components/dashboard/preview';
 import PinTask from '../../components/dashboard/pintask';
 import MainMenu from '../../components/dashboard/mainmenu';
-import Quest from '../../components/dashboard/quest';
 
 const {width, height} = Dimensions.get('window');
 
@@ -49,14 +48,11 @@ class Dashboard extends Component {
                 <View style={{width: '100%', height: height / 5.2, marginBottom: 20}}>
                     <Preview />
                 </View>
-                <View style={{width: '100%', height: height / 8, marginBottom: 15}}>
+                <View style={{width: '100%', height: height / 4.2, marginBottom: 10, marginTop: 10}}>
                     <MainMenu linkToFocusIn={this.linkToFocusIn} linkToEvent={this.linkToEvent} linkToClassRoom={this.linkToClassRoom} />
                 </View>
                 <View style={{width: '100%', height: height / 6}}>
                     <PinTask />
-                </View>
-                <View style={{width: '100%'}}>
-                    <Quest />
                 </View>
             </View>
         )

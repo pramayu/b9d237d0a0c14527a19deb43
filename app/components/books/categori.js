@@ -37,57 +37,57 @@ const renderBook = (props) => {
      return (
          <View style={{width: '100%', height: '100%', paddingTop: 40}}>
             <View style={{width: width, flexDirection: 'row'}}>
-                <TouchableOpacity style={{marginRight: 10, elevation: 10, borderRadius: 20, marginBottom: 10}}>
-                    <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#ffffff', alignSelf: 'flex-start', paddingVertical: 6, paddingBottom: 5,
-                    paddingHorizontal: 12, backgroundColor: '#3d72de', borderRadius: 20, borderWidth: .5, borderColor: '#ffffff'}}>LATEST STUDIED</Text>
+                <TouchableOpacity style={{marginRight: 10, elevation: 10, borderRadius: 6, marginBottom: 10}}>
+                    <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#ffffff', alignSelf: 'flex-start', paddingVertical: 8, paddingBottom: 7,
+                    paddingHorizontal: 12, backgroundColor: '#3d72de', borderRadius: 6, borderWidth: .5, borderColor: '#ffffff'}}>LATEST STUDIED</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={{marginRight: 10, borderRadius: 20, marginBottom: 10}}>
-                    <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#444', alignSelf: 'flex-start', paddingVertical: 6, paddingBottom: 5,
-                    paddingHorizontal: 12, backgroundColor: '#f6f6f4', borderRadius: 20, borderWidth: .5, borderColor: '#f1f1f1'}}>MATHEMATIKA</Text>
+                <TouchableOpacity style={{marginRight: 10, borderRadius: 6, marginBottom: 10}}>
+                    <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#444', alignSelf: 'flex-start', paddingVertical: 8, paddingBottom: 7,
+                    paddingHorizontal: 12, backgroundColor: '#f6f6f4', borderRadius: 6, borderWidth: .5, borderColor: '#f1f1f1'}}>MATHEMATIKA</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={{marginRight: 10, borderRadius: 20, marginBottom: 10}}>
-                    <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#444', alignSelf: 'flex-start', paddingVertical: 6, paddingBottom: 5,
-                    paddingHorizontal: 12, backgroundColor: '#f6f6f4', borderRadius: 20, borderWidth: .5, borderColor: '#f1f1f1'}}>CHEMISTRY</Text>
+                <TouchableOpacity style={{marginRight: 10, borderRadius: 6, marginBottom: 10}}>
+                    <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#444', alignSelf: 'flex-start', paddingVertical: 8, paddingBottom: 7,
+                    paddingHorizontal: 12, backgroundColor: '#f6f6f4', borderRadius: 6, borderWidth: .5, borderColor: '#f1f1f1'}}>CHEMISTRY</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={{marginRight: 10, borderRadius: 20, marginBottom: 10}}>
-                    <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#444', alignSelf: 'flex-start', paddingVertical: 6, paddingBottom: 5,
-                    paddingHorizontal: 12, backgroundColor: '#f6f6f4', borderRadius: 20, borderWidth: .5, borderColor: '#f1f1f1'}}>PHYSICS</Text>
+                <TouchableOpacity style={{marginRight: 10, borderRadius: 6, marginBottom: 10}}>
+                    <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#444', alignSelf: 'flex-start', paddingVertical: 8, paddingBottom: 7,
+                    paddingHorizontal: 12, backgroundColor: '#f6f6f4', borderRadius: 6, borderWidth: .5, borderColor: '#f1f1f1'}}>PHYSICS</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={{marginRight: 10, borderRadius: 20, marginBottom: 10}}>
-                    <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#444', alignSelf: 'flex-start', paddingVertical: 6, paddingBottom: 5,
-                    paddingHorizontal: 12, backgroundColor: '#f6f6f4', borderRadius: 20, borderWidth: .5, borderColor: '#f1f1f1'}}>ENGLISH</Text>
+                <TouchableOpacity style={{marginRight: 10, borderRadius: 6, marginBottom: 10}}>
+                    <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#444', alignSelf: 'flex-start', paddingVertical: 8, paddingBottom: 7,
+                    paddingHorizontal: 12, backgroundColor: '#f6f6f4', borderRadius: 6, borderWidth: .5, borderColor: '#f1f1f1'}}>ENGLISH</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={{marginRight: 10, borderRadius: 20, marginBottom: 10}}>
-                    <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#444', alignSelf: 'flex-start', paddingVertical: 6, paddingBottom: 5,
-                    paddingHorizontal: 12, backgroundColor: '#f6f6f4', borderRadius: 20, borderWidth: .5, borderColor: '#f1f1f1'}}>EKONOMI</Text>
+                <TouchableOpacity style={{marginRight: 10, borderRadius: 6, marginBottom: 10}}>
+                    <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#444', alignSelf: 'flex-start', paddingVertical: 8, paddingBottom: 7,
+                    paddingHorizontal: 12, backgroundColor: '#f6f6f4', borderRadius: 6, borderWidth: .5, borderColor: '#f1f1f1'}}>EKONOMI</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={{marginRight: 10, borderRadius: 20, marginBottom: 10}}>
-                    <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#444', alignSelf: 'flex-start', paddingVertical: 6, paddingBottom: 5,
-                    paddingHorizontal: 12, backgroundColor: '#f6f6f4', borderRadius: 20, borderWidth: .5, borderColor: '#f1f1f1'}}>BIOLOGI</Text>
+                <TouchableOpacity style={{marginRight: 10, borderRadius: 6, marginBottom: 10}}>
+                    <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#444', alignSelf: 'flex-start', paddingVertical: 8, paddingBottom: 7,
+                    paddingHorizontal: 12, backgroundColor: '#f6f6f4', borderRadius: 6, borderWidth: .5, borderColor: '#f1f1f1'}}>BIOLOGI</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={{marginRight: 10, borderRadius: 20, marginBottom: 10}}>
-                    <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#444', alignSelf: 'flex-start', paddingVertical: 6, paddingBottom: 5,
-                    paddingHorizontal: 12, backgroundColor: '#f6f6f4', borderRadius: 20, borderWidth: .5, borderColor: '#f1f1f1'}}>B.INDONESIA</Text>
+                <TouchableOpacity style={{marginRight: 10, borderRadius: 6, marginBottom: 10}}>
+                    <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#444', alignSelf: 'flex-start', paddingVertical: 8, paddingBottom: 7,
+                    paddingHorizontal: 12, backgroundColor: '#f6f6f4', borderRadius: 6, borderWidth: .5, borderColor: '#f1f1f1'}}>B.INDONESIA</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={{marginRight: 10, borderRadius: 20, marginBottom: 10}}>
-                    <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#444', alignSelf: 'flex-start', paddingVertical: 6, paddingBottom: 5,
-                    paddingHorizontal: 12, backgroundColor: '#f6f6f4', borderRadius: 20, borderWidth: .5, borderColor: '#f1f1f1'}}>SOSIOLOGI</Text>
+                <TouchableOpacity style={{marginRight: 10, borderRadius: 6, marginBottom: 10}}>
+                    <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#444', alignSelf: 'flex-start', paddingVertical: 8, paddingBottom: 7,
+                    paddingHorizontal: 12, backgroundColor: '#f6f6f4', borderRadius: 6, borderWidth: .5, borderColor: '#f1f1f1'}}>SOSIOLOGI</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={{marginRight: 10, borderRadius: 20, marginBottom: 10}}>
-                    <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#444', alignSelf: 'flex-start', paddingVertical: 6, paddingBottom: 5,
-                    paddingHorizontal: 12, backgroundColor: '#f6f6f4', borderRadius: 20, borderWidth: .5, borderColor: '#f1f1f1'}}>GEGRAPHY</Text>
+                <TouchableOpacity style={{marginRight: 10, borderRadius: 6, marginBottom: 10}}>
+                    <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#444', alignSelf: 'flex-start', paddingVertical: 8, paddingBottom: 7,
+                    paddingHorizontal: 12, backgroundColor: '#f6f6f4', borderRadius: 6, borderWidth: .5, borderColor: '#f1f1f1'}}>GEGRAPHY</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={{marginRight: 10, borderRadius: 20, marginBottom: 10}}>
-                    <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#444', alignSelf: 'flex-start', paddingVertical: 6, paddingBottom: 5,
-                    paddingHorizontal: 12, backgroundColor: '#f6f6f4', borderRadius: 20, borderWidth: .5, borderColor: '#f1f1f1'}}>HISTORY</Text>
+                <TouchableOpacity style={{marginRight: 10, borderRadius: 6, marginBottom: 10}}>
+                    <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#444', alignSelf: 'flex-start', paddingVertical: 8, paddingBottom: 7,
+                    paddingHorizontal: 12, backgroundColor: '#f6f6f4', borderRadius: 6, borderWidth: .5, borderColor: '#f1f1f1'}}>HISTORY</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={{marginRight: 10, borderRadius: 20, marginBottom: 10}}>
-                    <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#444', alignSelf: 'flex-start', paddingVertical: 6, paddingBottom: 5,
-                    paddingHorizontal: 12, backgroundColor: '#f6f6f4', borderRadius: 20, borderWidth: .5, borderColor: '#f1f1f1'}}>JURUSAN</Text>
+                <TouchableOpacity style={{marginRight: 10, borderRadius: 6, marginBottom: 10}}>
+                    <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#444', alignSelf: 'flex-start', paddingVertical: 8, paddingBottom: 7,
+                    paddingHorizontal: 12, backgroundColor: '#f6f6f4', borderRadius: 6, borderWidth: .5, borderColor: '#f1f1f1'}}>JURUSAN</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={{marginRight: 10, borderRadius: 20, marginBottom: 10}}>
-                    <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#444', alignSelf: 'flex-start', paddingVertical: 6, paddingBottom: 5,
-                    paddingHorizontal: 12, backgroundColor: '#f6f6f4', borderRadius: 20, borderWidth: .5, borderColor: '#f1f1f1'}}>PODCAST</Text>
+                <TouchableOpacity style={{marginRight: 10, borderRadius: 6, marginBottom: 10}}>
+                    <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#444', alignSelf: 'flex-start', paddingVertical: 8, paddingBottom: 7,
+                    paddingHorizontal: 12, backgroundColor: '#f6f6f4', borderRadius: 6, borderWidth: .5, borderColor: '#f1f1f1'}}>PODCAST</Text>
                 </TouchableOpacity>
             </View>
             {renderBook(props)}
