@@ -23,7 +23,7 @@ class ClassRoom extends Component {
         }
         this.showmodal = new Animated.Value(0);
         this.hidemodal = new Animated.Value(0);
-        this.goToQuiz = this.goToQuiz.bind(this);
+        this.goToGroup = this.goToGroup.bind(this);
         this.goToTask = this.goToTask.bind(this);
         this.goToAudiobook = this.goToAudiobook.bind(this);
         this.goToDiscuss = this.goToDiscuss.bind(this);
@@ -66,8 +66,8 @@ class ClassRoom extends Component {
         this.props.navigation.navigate('Report');
     }
 
-    goToQuiz = () => {
-        this.props.navigation.navigate('QuizStudent')
+    goToGroup = () => {
+        this.props.navigation.navigate('Group')
     }
 
     goToDiscuss = () => {
@@ -123,7 +123,7 @@ class ClassRoom extends Component {
                             </View>
                         </View>
                         <MainMenu goToSchedule={this.goToSchedule} goToBooks={this.goToBooks} goToTask={this.goToTask}
-                            goToReport={this.goToReport} goToQuiz={this.goToQuiz} goToDiscuss={this.goToDiscuss} goToAudiobook={this.goToAudiobook}
+                            goToReport={this.goToReport} goToGroup={this.goToGroup} goToDiscuss={this.goToDiscuss} goToAudiobook={this.goToAudiobook}
                             goToCounseling={this.goToCounseling} goToTeachers={this.goToTeachers} />
                     </View>
                 </Animated.View>

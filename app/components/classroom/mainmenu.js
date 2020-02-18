@@ -35,10 +35,10 @@ const MainMenu = (props) => {
                 <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#fbe610'}}>REPORT</Text>
             </View>
             <View style={{width: '33%', height: '25%', justifyContent: 'center', alignItems: 'center', borderWidth: 1, borderColor: '#2b3350', borderBottomWidth: 0}}>
-                <TouchableOpacity onPress={(e) => props.goToQuiz()} style={{width: 45, height: 45, borderRadius: 10, backgroundColor: '#323a5a', justifyContent: 'center', alignItems: 'center'}}>
-                    <SimpleLineIcons name="badge" size={20} color="#fbe610" />
+                <TouchableOpacity onPress={(e) => props.goToGroup()} style={{width: 45, height: 45, borderRadius: 10, backgroundColor: '#323a5a', justifyContent: 'center', alignItems: 'center'}}>
+                    <SimpleLineIcons name="grid" size={20} color="#fbe610" />
                 </TouchableOpacity>
-                <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#fbe610'}}>QUIZ</Text>
+                <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#fbe610'}}>GROUP</Text>
             </View>
             <View style={{width: '33%', height: '25%', justifyContent: 'center', alignItems: 'center', borderTopWidth: 1, borderColor: '#2b3350'}}>
                 <TouchableOpacity onPress={(e) => props.goToDiscuss()} style={{width: 45, height: 45, borderRadius: 10, backgroundColor: '#323a5a', justifyContent: 'center', alignItems: 'center'}}>

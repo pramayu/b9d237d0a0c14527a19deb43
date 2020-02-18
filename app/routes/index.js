@@ -17,7 +17,7 @@ import Schedule           from '../screens/dashboard/classroom/schedule/schedule
 import Books              from '../screens/dashboard/classroom/books/book';
 import Task               from '../screens/dashboard/classroom/task/task';
 import Report             from '../screens/dashboard/classroom/report/report';
-import QuizStudent        from '../screens/dashboard/classroom/quiz/quiz';
+import Group              from '../screens/dashboard/classroom/group/group';
 import Discuss            from '../screens/dashboard/classroom/discuss/discuss';
 import Audiobook          from '../screens/dashboard/classroom/audiobook/audiobook';
 import Teachers           from '../screens/dashboard/classroom/teacher/teacher';
@@ -76,8 +76,8 @@ const loggedScreenath = createStackNavigator({
   Report              : {
     screen: Report
   },
-  QuizStudent         : {
-    screen: QuizStudent
+  Group               : {
+    screen: Group
   },
   Discuss             : {
     screen: Discuss
