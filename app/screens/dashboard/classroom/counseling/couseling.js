@@ -18,6 +18,7 @@ class Counseling extends Component {
         this.state = {
             elevation: 8,
             keystatus: false,
+            keyheight: 0,
             modals: false,
             onoff: true,
         },
@@ -46,7 +47,10 @@ class Counseling extends Component {
         this.keyboardDidHideListener.remove();
     }
 
-    _keyboardDidShow = () => {
+    _keyboardDidShow = (e) => {
+        this.setState({
+            keyheight: e.endCoordinates.height
+        })
         Animated.timing(this.showKeybo, {
             toValue: 1,
             duration: 150,
@@ -66,7 +70,8 @@ class Counseling extends Component {
             useNativeDriver: true
         }).start(() => {
             this.setState({
-                keystatus: false
+                keystatus: false,
+                keyheight: 0
             })
             this.showKeybo.setValue(0);
         })
@@ -151,11 +156,11 @@ class Counseling extends Component {
         });
         const showKeyboSty = this.showKeybo.interpolate({
             inputRange: [0, 1],
-            outputRange: [0, -height / 3.5]
+            outputRange: [0, -this.state.keyheight]
         });
         const hideKeyboSty = this.hideKeybo.interpolate({
             inputRange: [0, 1],
-            outputRange: [-height / 3.5, 0]
+            outputRange: [-this.state.keyheight, 0]
         });
         return (
             <View style={[style.container,{paddingHorizontal: 20}]}>
