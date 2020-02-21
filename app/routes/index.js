@@ -17,13 +17,17 @@ import Schedule           from '../screens/dashboard/classroom/schedule/schedule
 import Books              from '../screens/dashboard/classroom/books/book';
 import Task               from '../screens/dashboard/classroom/task/task';
 import Report             from '../screens/dashboard/classroom/report/report';
+// group
 import Group              from '../screens/dashboard/classroom/group/group';
+import GroupConversation  from '../screens/dashboard/classroom/group/conversation';
+
 import Discuss            from '../screens/dashboard/classroom/discuss/discuss';
 import Audiobook          from '../screens/dashboard/classroom/audiobook/audiobook';
 import Teachers           from '../screens/dashboard/classroom/teacher/teacher';
 //Counseling
 import Counseling         from '../screens/dashboard/classroom/counseling/couseling';
 import UserChat           from '../screens/dashboard/classroom/counseling/chat';
+
 
 // check token
 import CheckRefreshToken  from '../screens/checktoken/checktoken';
@@ -78,6 +82,9 @@ const loggedScreenath = createStackNavigator({
   },
   Group               : {
     screen: Group
+  },
+  GroupConversation   : {
+    screen: GroupConversation
   },
   Discuss             : {
     screen: Discuss

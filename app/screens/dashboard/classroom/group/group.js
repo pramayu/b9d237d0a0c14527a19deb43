@@ -19,7 +19,8 @@ class Group extends Component {
             elevation: 8,
             modals: false,
             keystatus: false,
-            keyheight: 0
+            keyheight: 0,
+            screen: 'group'
         },
         this.showmodal = new Animated.Value(0);
         this.hidemodal = new Animated.Value(0);
@@ -103,6 +104,10 @@ class Group extends Component {
         }) 
     }
 
+    gotoConversation = () => {
+        this.props.navigation.navigate('GroupConversation')
+    }
+
     render() {
         const showmodalsty = this.showmodal.interpolate({
             inputRange: [0, 1],
@@ -124,10 +129,10 @@ class Group extends Component {
             <View style={[style.container,{paddingHorizontal: 20}]}>
                 <StatusBar backgroundColor="#ffffff" barStyle="dark-content" />
                 <View style={{width:'100%', height: height / 14}}>
-                    <Header />
+                    <Header screen={this.state.screen} />
                 </View>
                 <View style={{width:'100%', height: height / 1.1, paddingTop: 10}}>
-                    <ListGroup elevation={this.state.elevation}/>
+                    <ListGroup elevation={this.state.elevation} gotoConversation={this.gotoConversation}/>
                 </View>
                 <View style={{width: 45, height: 45, position: 'absolute', borderRadius: 100, bottom: 20, right: 20, elevation: this.state.elevation, backgroundColor: '#ededed', zIndex: 99}}>
                     <TouchableOpacity onPress={(e) => this.setShowModal()} style={{width: '100%', height: '100%', justifyContent: 'center', borderRadius: 100, alignItems: 'center', backgroundColor: '#3d72de', borderWidth: 1, borderColor: '#fff'}}>

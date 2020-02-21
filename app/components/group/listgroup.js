@@ -1,7 +1,8 @@
 import React from 'react';
 import {
     View, Text, Dimensions,
-    Image
+    Image,
+    TouchableOpacity
 } from 'react-native';
 
 const {width, height} = Dimensions.get('window');
@@ -29,6 +30,9 @@ const ListGroup = (props) => {
                         <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#ffffff'}}>5</Text>
                     </View>
                 </View>
+                <TouchableOpacity onPress={(e) => props.gotoConversation()} style={{width: '100%', height: '100%', backgroundColor: 'rgba(255,255,255,.2)', position: 'absolute', zIndex: 99}}>
+                    <Text></Text>
+                </TouchableOpacity>
             </View>
             <View style={{width: '100%', height: 65, flexDirection: 'row', marginBottom: 5}}>
                 <View style={{width: '20%', height: '100%', justifyContent: 'center'}}>
