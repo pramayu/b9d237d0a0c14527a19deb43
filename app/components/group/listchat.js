@@ -14,7 +14,7 @@ const ListChat = (props) => {
                 <Text style={{color: '#323a5a', fontSize: 12, fontFamily: 'Brandon_Medium', marginTop: 5, backgroundColor: '#f5f5f5',
                 alignSelf: 'center', paddingVertical: 4, paddingHorizontal: 15, borderRadius: 10}}>15 FEB 2020</Text>
             </View>
-            <TouchableOpacity style={{width: '100%', paddingRight: '25%', alignItems: 'flex-start', marginBottom: 15}}>
+            <TouchableOpacity onLongPress={(e) => props.setShowEdelRepl()} style={{width: '100%', paddingRight: '25%', alignItems: 'flex-start', marginBottom: 15}}>
                 <View style={{alignItems: 'center', flexDirection: 'row', backgroundColor: '#265abf', paddingVertical: 10, paddingTop: 12, paddingHorizontal: 12, borderRadius: 15, borderBottomLeftRadius: 5}}>
                    <View style={{width: 35, height: 42, backgroundColor: '#e8eaee', borderRadius: 8, borderTopRightRadius: 3, borderBottomLeftRadius: 3, justifyContent: 'center', paddingRight: 5}}>
                        <Text style={{paddingHorizontal: 5, paddingVertical: 2, backgroundColor: '#f15642', fontFamily: 'Brandon_Bold',

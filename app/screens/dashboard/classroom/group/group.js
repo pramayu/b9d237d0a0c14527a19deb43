@@ -155,9 +155,9 @@ class Group extends Component {
                                 fontFamily: 'SourceSansPro-SemiBold', color:"#ac9bf5", marginBottom: 15}} />
                             <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#ac9bf5', paddingLeft: 10, marginBottom: 5}}>INVITE BY TEACHER ID</Text>
                             <View style={{width: '100%', height: 43, backgroundColor: '#353f60', borderRadius:12, marginBottom: 15}}>
-                                {/* <TextInput placeholder="..." placeholderTextColor="#ac9bf5"
-                                    style={{width: '100%', height: '100%', paddingHorizontal: 15, paddingVertical: 0, fontSize: 14, fontFamily: 'SourceSansPro-SemiBold', color:"#ac9bf5"}} /> */}
-                                <TouchableOpacity style={{flexDirection: 'row', width: '100%', height: 43, padding: 5}}>
+                                <TextInput placeholder="..." placeholderTextColor="#ac9bf5"
+                                    style={{width: '100%', height: '100%', paddingHorizontal: 15, paddingVertical: 0, fontSize: 14, fontFamily: 'SourceSansPro-SemiBold', color:"#ac9bf5"}} />
+                                {/* <TouchableOpacity style={{flexDirection: 'row', width: '100%', height: 43, padding: 5}}>
                                     <View style={{width: 35, height: '100%', borderRadius: 12, alignSelf: 'flex-start', borderTopRightRadius: 0, borderBottomRightRadius:0, backgroundColor: '#ea4c89', borderWidth: 2, borderColor: '#ea4c89'}}>
                                         <Image style={{width: '100%', height: '100%', borderRadius: 12, resizeMode: 'cover'}}
                                             source={{uri: 'https://cdn.dribbble.com/users/3619723/screenshots/7564022/forest.png'}} />
@@ -166,7 +166,7 @@ class Group extends Component {
                                         <Text style={{height:'100%', paddingTop: 8, paddingRight: 12, backgroundColor: '#ea4c89', paddingLeft: 5,
                                             fontFamily: 'SourceSansPro-SemiBold', color:'#ffffff', borderTopRightRadius: 12, borderBottomRightRadius:12}}>Leonardus</Text>
                                     </View>
-                                </TouchableOpacity>
+                                </TouchableOpacity> */}
                             </View>
                             <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#ac9bf5', paddingLeft: 10, marginBottom: 5}}>INVITE BY MEMBER ID</Text>
                             <View style={{width: '100%', height: 90, backgroundColor: '#353f60', borderRadius:12, marginBottom: 15}}>
