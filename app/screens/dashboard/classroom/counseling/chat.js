@@ -67,8 +67,11 @@ class UserChat extends Component {
                             </View>
                             <TouchableOpacity onLongPress={(e) => this.set_ShowActionbtn()} style={{paddingRight: '25%', marginBottom: 10, alignItems: 'flex-start'}}>
                                 <Text style={{alignSelf: 'flex-start', paddingVertical: 10, paddingTop: 12, paddingHorizontal: 15, borderRadius: 15, fontFamily: 'Brandon_Regular', fontSize: 16, lineHeight: 19,
-                                    backgroundColor: '#3d72de', color:'#ffffff', borderBottomLeftRadius: 2}}>The driver carries a huge responsibility so he steers carefully</Text>
-                                <Text style={{color: '#323a5a', fontSize: 12, fontFamily: 'Brandon_Medium', marginTop: 2}}>12:01PM <Ionicons name="ios-done-all" size={24} color="#3d72de" /></Text>
+                                    backgroundColor: '#265abf', color:'#ffffff', borderBottomLeftRadius: 2}}>The driver carries a huge responsibility so he steers carefully</Text>
+                                <View style={{flexDirection: 'row'}}>
+                                    <Text style={{color: '#323a5a', fontSize: 12, fontFamily: 'Brandon_Medium', marginTop: 6, marginRight: 8}}>09:01PM</Text>
+                                    <Ionicons name="ios-done-all" size={24} color="#265abf" />
+                                </View>
                             </TouchableOpacity>
                             <TouchableOpacity style={{paddingLeft: '25%', marginBottom: 10, alignItems: 'flex-end'}}>
                                 <Text style={{alignSelf: 'flex-end', paddingVertical: 10, paddingTop: 12, paddingHorizontal: 15, borderRadius: 15, fontFamily: 'Brandon_Regular', fontSize: 16, lineHeight: 19,

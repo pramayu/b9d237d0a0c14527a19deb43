@@ -9,6 +9,7 @@ import {
 import { style }  from '../../../../styles/sty';
 import SimpleLineIcons   from 'react-native-vector-icons/SimpleLineIcons';
 import Header from '../../../../components/group/header';
+import ListChat from '../../../../components/group/listchat';
 
 const {width, height} = Dimensions.get('window');
 
@@ -73,11 +74,11 @@ class GroupConversation extends Component {
     render() {
         const showkeyboardsty = this.showKeyboard.interpolate({
             inputRange: [0, 1],
-            outputRange: [0, -this.state.keyheight-30]
+            outputRange: [0, -this.state.keyheight-25]
         });
         const hidekeyboardsty = this.hideKeyboard.interpolate({
             inputRange: [0, 1],
-            outputRange: [-this.state.keyheight-30, 0]
+            outputRange: [-this.state.keyheight-25, 0]
         });
         return (
             <View style={[style.container,{paddingHorizontal: 20}]}>
@@ -86,7 +87,11 @@ class GroupConversation extends Component {
                     <Header screen={this.state.screen} />
                 </View>
                 <View style={{width: '100%', height: height / 1.08}}>
-                    <Animated.View style={{width: '100%', height: 65, position: 'absolute', bottom: 0, zIndex: 999, transform: [{translateY: this.state.keystatus === true ? hidekeyboardsty : showkeyboardsty}]}}>
+                    <View style={{width: '100%', height: '100%', justifyContent: 'flex-end'}}>
+                        <ListChat />
+                    </View>
+                    <Animated.View style={{width: '100%', height: 65, position: 'absolute', bottom: 0, zIndex: 999, backgroundColor: '#fff',
+                        transform: [{translateY: this.state.keystatus === true ? hidekeyboardsty : showkeyboardsty}]}}>
                         <View style={{width: '100%', height: '100%', flexDirection: 'row'}}>
                             <View style={{width: this.state.conversation.length > 0 ? '85%':'70%', justifyContent: 'center'}}>
                                 <TextInput placeholder="Type Something.." placeholderTextColor="#323a5a" onChangeText={(txt) => this.setConversation('conversation', txt)}
