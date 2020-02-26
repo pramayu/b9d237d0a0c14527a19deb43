@@ -7,7 +7,7 @@ import Ionicons   from 'react-native-vector-icons/Ionicons';
 
 const {width, height} = Dimensions.get('window');
 
-const FeedFocusIn = () => {
+const FeedFocusIn = (props) => {
     return (
         <>
             <View style={{marginBottom: 40}}>

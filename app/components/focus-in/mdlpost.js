@@ -66,23 +66,29 @@ const MdlPost = (props) => {
                 <TextInput placeholder="filter by tags" placeholderTextColor="#ffffff" value={props.tag} onChangeText={(tag) => props.setFeedTag(tag)} onKeyPress={(e) => setFilterTags(e, props)} autoCapitalize = 'none'
                     style={{width: '50%', height: 28, paddingVertical: 0, paddingHorizontal: 5, fontFamily: 'Brandon_Medium', fontSize: 16, color: '#ffffff'}}/>
             </View>
-            <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#ffffff', marginTop: 20}}>Share Picture</Text>
-            <View style={{width: '100%', flexDirection: 'row', marginTop: 10}}>
-                <TouchableOpacity style={{width: 70, height: 70, borderRadius: 6, backgroundColor: '#455176', borderWidth: .5,
-                    borderColor: '#2e3853', justifyContent: 'center', alignItems: 'center', marginRight: 5}}>
-                    <Ionicons name="ios-cloud-upload" size={32} color="#ffffff" />
-                </TouchableOpacity>
-                <TouchableOpacity style={{width: 70, height: 70, borderRadius: 6, backgroundColor: '#455176', borderWidth: .5,
-                    borderColor: '#2e3853', justifyContent: 'center', alignItems: 'center', marginRight: 5, elevation: 10}}>
-                    <Image style={{width: '100%', height: '100%', borderRadius: 6, resizeMode: "cover"}}
-                        source={{uri: 'https://cdn.dribbble.com/users/452635/screenshots/6480005/195.3.pre_2x.png'}}/>
-                </TouchableOpacity>
-                <TouchableOpacity style={{width: 70, height: 70, borderRadius: 6, backgroundColor: '#455176', borderWidth: .5,
-                    borderColor: '#2e3853', justifyContent: 'center', alignItems: 'center', marginRight: 5, elevation: 10}}>
-                    <Image style={{width: '100%', height: '100%', borderRadius: 6, resizeMode: "cover"}}
-                        source={{uri: 'https://cdn.dribbble.com/users/328251/screenshots/2828040/68.png'}}/>
-                </TouchableOpacity>
-            </View>
+            {
+                props.feedtype === 'quest'?
+                null :
+                <>
+                    <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 12, color: '#ffffff', marginTop: 20}}>Share Picture</Text>
+                    <View style={{width: '100%', flexDirection: 'row', marginTop: 10}}>
+                        <TouchableOpacity style={{width: 70, height: 70, borderRadius: 6, backgroundColor: '#455176', borderWidth: .5,
+                            borderColor: '#2e3853', justifyContent: 'center', alignItems: 'center', marginRight: 5}}>
+                            <Ionicons name="ios-cloud-upload" size={32} color="#ffffff" />
+                        </TouchableOpacity>
+                        <TouchableOpacity style={{width: 70, height: 70, borderRadius: 6, backgroundColor: '#455176', borderWidth: .5,
+                            borderColor: '#2e3853', justifyContent: 'center', alignItems: 'center', marginRight: 5, elevation: 10}}>
+                            <Image style={{width: '100%', height: '100%', borderRadius: 6, resizeMode: "cover"}}
+                                source={{uri: 'https://cdn.dribbble.com/users/452635/screenshots/6480005/195.3.pre_2x.png'}}/>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={{width: 70, height: 70, borderRadius: 6, backgroundColor: '#455176', borderWidth: .5,
+                            borderColor: '#2e3853', justifyContent: 'center', alignItems: 'center', marginRight: 5, elevation: 10}}>
+                            <Image style={{width: '100%', height: '100%', borderRadius: 6, resizeMode: "cover"}}
+                                source={{uri: 'https://cdn.dribbble.com/users/328251/screenshots/2828040/68.png'}}/>
+                        </TouchableOpacity>
+                    </View>
+                </>
+            }
         </View>
     )
 }

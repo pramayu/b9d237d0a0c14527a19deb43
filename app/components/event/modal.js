@@ -63,7 +63,7 @@ const EventModal = (props) => {
             </View>
             <TouchableOpacity style={{width: '100%', height: 40, borderRadius: 6, backgroundColor: '#6298ff',
                 position: 'absolute', bottom: 15, left: 15, elevation: 20, justifyContent: 'center', alignItems: 'center'}}>
-                <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 14, color: '#ffffff'}}>SHARE</Text>
+                <Text style={{fontFamily: 'SourceSansPro-SemiBold', fontSize: 14, color: '#ffffff'}}>FILTER</Text>
             </TouchableOpacity>
         </View>
     )

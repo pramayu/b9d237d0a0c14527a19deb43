@@ -3,7 +3,7 @@ import {
     View, Text, Dimensions, StatusBar,
     TextInput,
     TouchableOpacity,
-    Animated
+    Animated, Keyboard
 } from 'react-native';
 import Ionicons   from 'react-native-vector-icons/Ionicons';
 import { style }  from '../../../../styles/sty';
@@ -15,10 +15,55 @@ class UserChat extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            status: false
+            status: false,
+            keysts: false,
+            keyheight: 0
         }
         this.showactionbtn = new Animated.Value(0);
         this.hideactionbtn = new Animated.Value(0);
+        this.showkeyboardx = new Animated.Value(0);
+        this.hidekeyboardx = new Animated.Value(0);
+    }
+
+    componentDidMount = () => {
+        this.keyboardDidShowListener = Keyboard.addListener(
+          'keyboardDidShow',
+          this._keyboardDidShow,
+        );
+        this.keyboardDidHideListener = Keyboard.addListener(
+          'keyboardDidHide',
+          this._keyboardDidHide,
+        );
+    }
+
+    componentWillUnmount = () => {
+        this.keyboardDidShowListener.remove();
+        this.keyboardDidHideListener.remove();
+    }
+
+    _keyboardDidShow = (e) => {
+        this.setState({
+            keyheight: e.endCoordinates.height
+        })
+        Animated.timing(this.showkeyboardx, {
+            toValue: 1,
+            duration: 100,
+            useNativeDriver: true
+        }).start(() => {
+            this.setState({keysts: true})
+            this.hidekeyboardx.setValue(0)
+        })
+    }
+    
+    _keyboardDidHide = () => {
+        Animated.timing(this.hidekeyboardx, {
+            toValue: 1,
+            duration: 80,
+            useNativeDriver: true
+        }).start(() => {
+            this.setState({keysts: false, keyheight: 0})
+            this.showkeyboardx.setValue(0)
+        })
     }
 
     set_ShowActionbtn = () => {
@@ -52,6 +97,14 @@ class UserChat extends Component {
             inputRange: [0, 1],
             outputRange: [0, 100]
         });
+        const showkeyboardxsty = this.showkeyboardx.interpolate({
+            inputRange: [0, 1],
+            outputRange: [0, -this.state.keyheight-20]
+        });
+        const hidekeyboardxsty = this.hidekeyboardx.interpolate({
+            inputRange: [0, 1],
+            outputRange: [-this.state.keyheight-20, 0]
+        });
         return(
             <View style={[style.container,{paddingHorizontal: 20}]}>
                 <StatusBar backgroundColor="#ffffff" barStyle="dark-content" />
@@ -81,7 +134,8 @@ class UserChat extends Component {
                         </View>
                     </View>
                 </View>
-                <View style={{width: width, height: 65, backgroundColor: '#ffffff', position: 'absolute', bottom: 0, right: 0, left: 0, zIndex: 99, paddingHorizontal: 20}}>
+                <Animated.View style={{width: width, height: 65, backgroundColor: '#ffffff', position: 'absolute',
+                    bottom: 0, right: 0, left: 0, zIndex: 99, paddingHorizontal: 20, transform: [{translateY: this.state.keysts === false ? showkeyboardxsty : hidekeyboardxsty}]}}>
                     <View style={{width: '100%', flexDirection: 'row'}}>
                         <View style={{width: '82%', justifyContent: 'center', height: '100%'}}>
                             <TextInput placeholder="Type Something.." placeholderTextColor="#323a5a"
@@ -97,7 +151,7 @@ class UserChat extends Component {
                             </View>
                         </View>
                     </View>
-                </View>
+                </Animated.View>
                 <Animated.View style={{width: width, height: 65, backgroundColor: '#ffffff', position: 'absolute', bottom: 0, right: 0, left: 0, zIndex: 999,
                     paddingHorizontal: 20, transform: [{translateY: this.state.status === false ? showactionbtnsty : hideactionbtnsty}]}}>
                     <View style={{width: '100%', height: '100%', flexDirection: 'row'}}>

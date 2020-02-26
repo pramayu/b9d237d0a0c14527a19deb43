@@ -166,7 +166,7 @@ const FocusInMenu = (props) => {
                     </View>
                     {
                         props.actionbutton === 'add' ? 
-                        <MdlPost feedtype={props.feedtype} setRemoveTag={props.setRemoveTag} setFeedTags={props.setFeedTags} tags={props.tags} setFeedTag={props.setFeedTag} tag={props.tag} /> :
+                        <MdlPost setFeedType={props.setFeedType} feedtype={props.feedtype}  setRemoveTag={props.setRemoveTag} setFeedTags={props.setFeedTags} tags={props.tags} setFeedTag={props.setFeedTag} tag={props.tag} /> :
                         <MdlFilter setRemoveTag={props.setRemoveTag} setFeedTags={props.setFeedTags} tags={props.tags} setFeedTag={props.setFeedTag} tag={props.tag} />
                     }
                     {
